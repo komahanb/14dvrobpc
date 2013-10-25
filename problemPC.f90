@@ -124,38 +124,39 @@
   !===================================================================
   !(2)     Integer Settings and store into IDAT (check for size above)
   !===================================================================
-  
-  kprob=1  
-  probtype(:)=1
+  if (id_proc.eq.0) open(unit=76,file='Opt.his',form='formatted',status='replace')
 
-  IDAT(1)=kprob
-  IDAT(2)=0
-  IDAT(3:N+2)=probtype(1:N)
+  do  kprob=0,4  
+     probtype(:)=1
 
-  !===============================================
-  !(3)     Setup std dev and store in to dat(1:N)
-  !===============================================
+     IDAT(1)=kprob
+     IDAT(2)=0
+     IDAT(3:N+2)=probtype(1:N)
 
-  Lifttarget=0.9  !0.268482186143556
-  DAT(1)=Lifttarget
-  do i=2,N+1
-     DAT(i)=sigmax(i-1)
-  end do
+     !===============================================
+     !(3)     Setup std dev and store in to dat(1:N)
+     !===============================================
 
-  !====================
-  !(4)     Constraints
-  !====================
+     Lifttarget=0.9  !0.268482186143556
+     DAT(1)=Lifttarget
+     do i=2,N+1
+        DAT(i)=sigmax(i-1)
+     end do
 
-  do i=1,M
-     G_L(i)=-infbound
-     G_U(i)=0.0
-  end do
+     !====================
+     !(4)     Constraints
+     !====================
 
-  !===========================================================
-  !(5)    Other constants to be passed to the surrogate call
-  !===========================================================
-  
-  pi=4.0*atan(1.0) ! constant for later use
+     do i=1,M
+        G_L(i)=-infbound
+        G_U(i)=0.0
+     end do
+
+     !===========================================================
+     !(5)    Other constants to be passed to the surrogate call
+     !===========================================================
+
+     pi=4.0*atan(1.0) ! constant for later use
 
 !!$
 !!$  !Problem data and other constants
@@ -177,103 +178,104 @@
 !!$  dat(1000+13)=0.005    ! in  max_v_disp=dat(12)
 !!$  dat(1000+14)=1.0      ! Factor of safety
 
-  dat(1000+20)=77       ! filenum for PC
+     dat(1000+20)=77       ! filenum for PC
 
-!===========================================================================
-!
-!     First create a handle for the Ipopt problem (and read the options
-!     file)
-!
-      IPROBLEM = IPCREATE(N, X_L, X_U, M, G_L, G_U, NELE_JAC, NELE_HESS,IDX_STY, EV_F, EV_G, EV_GRAD_F, EV_JAC_G, EV_HESS)
-      if (IPROBLEM.eq.0) then
-         write(*,*) 'Error creating an Ipopt Problem handle.'
-         call stop_all
-      endif
-!
-!     Open output files
-!
-
-      if (id_proc.eq.0) open(unit=76,file='Opt.his',form='formatted',status='replace')
-
-      IERR = IPOPENOUTPUTFILE(IPROBLEM, 'IPOPT.OUT', 5)
-      if (IERR.ne.0 ) then
-         write(*,*) 'Error opening the Ipopt output file.'
-         goto 9000
-      endif
-!!
-!!     Set a callback function to give you control once per iteration.
-!!     You can use it if you want to generate some output, or to stop
-!!     the optimization early.
-!!
-      call IPSETCALLBACK(IPROBLEM, ITER_CB)
-
-!
-!     Call optimization routine
-!
-      if (id_proc.eq.0) then
-          IERR = IPADDINTOPTION(IPROBLEM, 'print_level', 0)
-          if (IERR.ne.0 ) goto 9990
-      else
-         IERR = IPADDINTOPTION(IPROBLEM, 'print_level', 0)
-         if (IERR.ne.0 ) goto 9990
-      end if
-
-      IERR = IPSOLVE(IPROBLEM, X, G, F, LAM, Z_L, Z_U, IDAT, DAT)
+     !===========================================================================
+     !
+     !     First create a handle for the Ipopt problem (and read the options
+     !     file)
+     !
+     IPROBLEM = IPCREATE(N, X_L, X_U, M, G_L, G_U, NELE_JAC, NELE_HESS,IDX_STY, EV_F, EV_G, EV_GRAD_F, EV_JAC_G, EV_HESS)
+     if (IPROBLEM.eq.0) then
+        write(*,*) 'Error creating an Ipopt Problem handle.'
+        call stop_all
+     endif
+     !
+     !     Open output files
+     !
 
 
-!===================
-! (6)  Output:
-!==================
+     IERR = IPOPENOUTPUTFILE(IPROBLEM, 'IPOPT.OUT', 5)
+     if (IERR.ne.0 ) then
+        write(*,*) 'Error opening the Ipopt output file.'
+        goto 9000
+     endif
+     !!
+     !!     Set a callback function to give you control once per iteration.
+     !!     You can use it if you want to generate some output, or to stop
+     !!     the optimization early.
+     !!
+     call IPSETCALLBACK(IPROBLEM, ITER_CB)
+
+     !
+     !     Call optimization routine
+     !
+     if (id_proc.eq.0) then
+        IERR = IPADDINTOPTION(IPROBLEM, 'print_level', 0)
+        if (IERR.ne.0 ) goto 9990
+     else
+        IERR = IPADDINTOPTION(IPROBLEM, 'print_level', 0)
+        if (IERR.ne.0 ) goto 9990
+     end if
+
+     IERR = IPSOLVE(IPROBLEM, X, G, F, LAM, Z_L, Z_U, IDAT, DAT)
 
 
-      if (id_proc.eq.0) then
+     !===================
+     ! (6)  Output:
+     !==================
 
-         if( IERR.eq.IP_SOLVE_SUCCEEDED .or. IERR.eq.5) then
-            write(*,*)
-            write(*,*) 'The solution was found.'
-            write(*,*)
-         else
-            write(*,*)
-            write(*,*) 'An error occoured.'
-            write(*,*) 'The error code is ',IERR
-            write(*,*)
-         endif
-         
-         write(*,*) 'The final value of the objective function is ',F
-         write(*,*)
-         write(*,*) 'The optimal values of X are:'
-         write(*,*)
-         X(N-1)=X(N-1)*180.0/pi
-         do i = 1, N
-            write(*,*) 'X  (',i,') = ',X(i)
-         enddo
-         write(*,*)
-         write(*,*) 'The multipliers for the equality constraints are:'
-         write(*,*)
-         do i = 1, M
-            write(*,*) 'LAM(',i,') = ',LAM(i)
-         enddo
-         write(*,*)
-         write(*,*) 'Mean drag and its variance:',DAT(N+2),DAT(N+3)
 
-      end if
-         
-!
- 9000 continue
-!
-!     Clean up
-!
-      call IPFREE(IPROBLEM)
-      
-      if (id_proc.eq.0) close(76)
+     if (id_proc.eq.0) then
 
-      call stop_all
-!
- 9990 continue
-      write(*,*) 'Error setting an option'
-      goto 9000
+        if( IERR.eq.IP_SOLVE_SUCCEEDED .or. IERR.eq.5) then
+           write(*,*)
+           write(*,*) 'The solution was found.'
+           write(*,*)
+        else
+           write(*,*)
+           write(*,*) 'An error occoured.'
+           write(*,*) 'The error code is ',IERR
+           write(*,*)
+        endif
 
-    end program problemPC
+        write(*,*) 'The final value of the objective function is ',F
+        write(*,*)
+        write(*,*) 'The optimal values of X are:'
+        write(*,*)
+        X(N-1)=X(N-1)*180.0/pi
+        do i = 1, N
+           write(*,*) 'X  (',i,') = ',X(i)
+        enddo
+        write(*,*)
+        write(*,*) 'The multipliers for the equality constraints are:'
+        write(*,*)
+        do i = 1, M
+           write(*,*) 'LAM(',i,') = ',LAM(i)
+        enddo
+        write(*,*)
+        write(*,*) 'Mean drag and its variance:',DAT(N+2),DAT(N+3)
+
+     end if
+
+     !
+9000 continue
+     !
+     !     Clean up
+     !
+     call IPFREE(IPROBLEM)
+
+
+     !
+9990 continue
+     write(*,*) 'Error setting an option'
+     goto 9000
+  end do
+  if (id_proc.eq.0) close(76)
+
+  call stop_all
+
+end program problemPC
 !
 ! =============================================================================
 !

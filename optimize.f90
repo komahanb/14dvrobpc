@@ -1,8 +1,8 @@
-subroutine optimize(ndvar,D,ndvart,fobj,dfdD,low,up,gtol,maximize,outputscreen,fct,fctindx)
+subroutine optimize(ndvar,D,ndvart,fobj,dfdD,low,up,gtol,maximize,outputscreen,fctindx)
   use omp_lib
   implicit none
 
-  integer   ::   mmax,ndvar,ndvart,Nouter,maxfev,fctindx,fct
+  integer   ::   mmax,ndvar,ndvart,Nouter,maxfev,fctindx
   parameter      (mmax=100)  !mmax is the maximum number of limited memory corrections.
 
   double precision :: D(ndvart),fobj,dfdD(ndvart),dfdDtmp(ndvar),dfdDD(ndvart,ndvart),v(ndvart),gtol,low(ndvar),up(ndvar)
