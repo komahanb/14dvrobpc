@@ -124,7 +124,7 @@
   !===================================================================
   !(2)     Integer Settings and store into IDAT (check for size above)
   !===================================================================
-  if (id_proc.eq.0) open(unit=76,file='Opt.his',form='formatted',status='replace')
+       if (id_proc.eq.0) open(unit=76,file='Opt.his',form='formatted',status='replace')
 
   do  kprob=0,4  
      probtype(:)=1
@@ -717,37 +717,32 @@ end program problemPC
 !====================
 
 
-      
-      subroutine epigrads(fct,fctindx,dim,ndimt,xtmp,xstdt,ftmp,dftmp)
-        use omp_lib
-        !    use dimpce, only: DS,fctindx,reusesamples,ndimt,xavgt,xstdt
-        implicit none
-        integer :: DIM,ndimt,fct,fctindx
-        !   real*8 :: x(DIM),f,df(DIM),d2f(DIM,DIM),scal,scal2,prd,time,time2
+    subroutine epigrads(fct,fctindx,dim,ndimt,xtmp,xstdt,ftmp,dftmp)
+      implicit none
+      integer :: DIM,ndimt,fct,fctindx
+      real*8,intent(in)  :: xtmp(ndimt),xstdt(ndimt)
+      real*8,intent(out) :: dftmp(ndimt)
+      real*8::ftmp
 
-        real*8,intent(in)  :: xtmp(ndimt),xstdt(ndimt)
-        real*8,intent(out) :: dftmp(ndimt)
-        real*8::ftmp
+      real*8 :: gtol,low(ndimt-DIM),up(ndimt-DIM)
 
-        real*8 :: gtol,low(ndimt-DIM),up(ndimt-DIM)
+      gtol=1e-6
+      low(1:ndimt-DIM)=xtmp(1:ndimt-DIM)
+      up(1:ndimt-DIM)=xtmp(1:ndimt-DIM)
 
-        gtol=1e-6
-        low(1:ndimt-DIM)=xtmp(1:ndimt-DIM)
-        up(1:ndimt-DIM)=xtmp(1:ndimt-DIM)
+      if (fctindx.eq.0) then
 
-        if(fctindx.eq.0) then
-           
-           call optimize(ndimt-DIM,xtmp,ndimt,ftmp,dftmp,low,up,gtol,.true.,.false.,20,fctindx)
+         call optimize(ndimt-DIM,xtmp,ndimt,ftmp,dftmp,low,up,gtol,.true.,.false.,fctindx)
 
-        else if (fctindx.eq.4) then
+      else if (fctindx.eq.4) then
 
-           call optimize(ndimt-DIM,xtmp,ndimt,ftmp,dftmp,low,up,gtol,.false.,.false.,20,fctindx)
+         call optimize(ndimt-DIM,xtmp,ndimt,ftmp,dftmp,low,up,gtol,.false.,.false.,fctindx)
 
-        else 
+      else 
 
-           stop'wrong fct indx'
+         stop'wrong fct indx'
 
-        end if
+      end if
 
       return
     end subroutine epigrads
