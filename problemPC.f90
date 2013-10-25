@@ -317,11 +317,6 @@
 
       call PCestimate(2,N,x,sigmax,22,0,DAT(1001:1020),1,2,2,0,probtype,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp,fmeandbleprimetmp,fvardbleprimetmp)
 
-      !call Krigingestimate(2,N,x,sigmax,22,0,DAT(1001:1020),5,2,9,0,probtype,myflag,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp)
-
-
-      !!      call Krigingestimate(2,X,N,sigmax,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp,NMC,0)
-
       !fvartmp=0.0
       !fvarprimetmp(:)=0.0
       !call Eulersolve(X,N,0,fmeantmp,dfdD,dfdDD,1,v,0)
@@ -401,11 +396,6 @@
 
 
       call PCestimate(2,N,x,sigmax,22,4,DAT(1001:1020),1,2,2,0,probtype,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp,fmeandbleprimetmp,fvardbleprimetmp)
-
-
-!      call Krigingestimate(2,N,x,sigmax,22,4,DAT(1001:1020),5,2,9,0,probtype,myflag,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp)
-
-!!      call Krigingestimate(2,X,N,sigmax,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp,NMC,4)
 
       !fvartmp=0.0
       !fvarprimetmp(:)=0.0
@@ -506,10 +496,6 @@
       call PCestimate(2,N,x,sigmax,22,0,DAT(1001:1020),1,2,2,0,probtype,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp,fmeandbleprimetmp,fvardbleprimetmp)
 
 
-!         call Krigingestimate(2,N,x,sigmax,22,0,DAT(1001:1020),5,2,9,0,probtype,myflag,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp)
-
-!!         call Krigingestimate(2,X,N,sigmax,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp,NMC,0)
-
          !fvartmp=0.0
          !fvarprimetmp(:)=0.0
          !call Eulersolve(x,n,0,fmeantmp,GRADtmp,dfdDD,1,v,0)
@@ -608,10 +594,6 @@
 
 
             call PCestimate(2,N,x,sigmax,22,4,DAT(1001:1020),1,2,2,0,probtype,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp,fmeandbleprimetmp,fvardbleprimetmp)
-
-            !            call Krigingestimate(2,N,x,sigmax,22,4,DAT(1001:1020),5,2,9,0,probtype,myflag,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp)
-
-            !!            call Krigingestimate(2,X,N,sigmax,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp,NMC,4)
 
             !fvartmp=0.0
             !fvarprimetmp(:)=0.0
