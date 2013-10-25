@@ -1,0 +1,31 @@
+ 
+ =======================================================
+ Non-Intrusive Polynomial Chaos (Stochastic Collocation)
+ =======================================================
+ Author: Komahan Boopathy, University of Dayton, OH
+ Email : komahan.cool@gmail.com
+ =======================================================
+ 
+ 
+ =================================================
+          Summary of function requirements        
+ =================================================
+ 
+ >> Number of Function evals needed :           6
+ 
+ >> Including center of the domain
+ >> Training points are written to file :samp/sampdim02ord02Fmirdyn                                  
+ 
+ =================================================
+         Matrix Setup & Pseudo-Inverse            
+ =================================================
+ 
+  >> Number of columns in the matrix (nterms):           6
+  >> Number of rows    in the matrix  (numpc):           6
+     >> Solver : LU Decomposition
+     >> Finding Pseudo-Inverse of the matrix . . . 
+ 
+ =================================================
+                 RHS Setup                        
+ =================================================
+ 
