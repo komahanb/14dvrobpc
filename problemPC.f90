@@ -104,7 +104,7 @@
   !     Set initial point, bounds and sigmax for flow variables (aleatory):
   !
 
-  sigmax(N-1)=0.1
+  sigmax(N-1)=0.5
   X(N-1) = 2.0    !alpha in degrees
   X_L(N-1) = 0.0
   X_U(N-1) = 4.0
@@ -116,7 +116,7 @@
   X_U(N-1) = X_U(N-1)*pi/180.0
 
 
-  sigmax(N)=0.01
+  sigmax(N)=0.05
   X(N) = 0.56  !Minf
   X_L(N) = 0.1
   X_U(N) = 0.78
@@ -126,7 +126,8 @@
   !===================================================================
        if (id_proc.eq.0) open(unit=76,file='Opt.his',form='formatted',status='replace')
 
-  do  kprob=0,4  
+       !do 
+       kprob=0 !,4  
      probtype(:)=1
 
      IDAT(1)=kprob
@@ -137,7 +138,7 @@
      !(3)     Setup std dev and store in to dat(1:N)
      !===============================================
 
-     Lifttarget=0.9  !0.268482186143556
+     Lifttarget=0.6  !0.268482186143556
      DAT(1)=Lifttarget
      do i=2,N+1
         DAT(i)=sigmax(i-1)
@@ -270,7 +271,9 @@
 9990 continue
      write(*,*) 'Error setting an option'
      goto 9000
-  end do
+
+!  end do
+
   if (id_proc.eq.0) close(76)
 
   call stop_all
@@ -317,7 +320,7 @@ end program problemPC
       NMC=100000
       
 
-      call PCestimate(2,N,x,sigmax,22,0,DAT(1001:1020),1,2,2,0,probtype,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp,fmeandbleprimetmp,fvardbleprimetmp)
+      call PCestimate(2,N,x,sigmax,22,0,DAT(1001:1020),1,4,4,0,probtype,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp,fmeandbleprimetmp,fvardbleprimetmp)
 
       !fvartmp=0.0
       !fvarprimetmp(:)=0.0
@@ -397,7 +400,7 @@ end program problemPC
       NMC=100000
 
 
-      call PCestimate(2,N,x,sigmax,22,4,DAT(1001:1020),1,2,2,0,probtype,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp,fmeandbleprimetmp,fvardbleprimetmp)
+      call PCestimate(2,N,x,sigmax,22,4,DAT(1001:1020),1,4,4,0,probtype,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp,fmeandbleprimetmp,fvardbleprimetmp)
 
       !fvartmp=0.0
       !fvarprimetmp(:)=0.0
@@ -495,7 +498,7 @@ end program problemPC
 
          NMC=100000
 
-      call PCestimate(2,N,x,sigmax,22,0,DAT(1001:1020),1,2,2,0,probtype,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp,fmeandbleprimetmp,fvardbleprimetmp)
+      call PCestimate(2,N,x,sigmax,22,0,DAT(1001:1020),1,4,4,0,probtype,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp,fmeandbleprimetmp,fvardbleprimetmp)
 
 
          !fvartmp=0.0
@@ -595,7 +598,7 @@ end program problemPC
             dc(:,:)=0.0
 
 
-            call PCestimate(2,N,x,sigmax,22,4,DAT(1001:1020),1,2,2,0,probtype,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp,fmeandbleprimetmp,fvardbleprimetmp)
+            call PCestimate(2,N,x,sigmax,22,4,DAT(1001:1020),1,4,4,0,probtype,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp,fmeandbleprimetmp,fvardbleprimetmp)
 
             !fvartmp=0.0
             !fvarprimetmp(:)=0.0

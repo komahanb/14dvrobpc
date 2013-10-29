@@ -34,7 +34,7 @@ subroutine optimize(ndvar,D,ndvart,fobj,dfdD,low,up,gtol,maximize,outputscreen,f
   !     We suppress both code-supplied stopping tests because the
   !        user is providing his own stopping criteria.
 
-  factr=1.d+12
+  factr=0.0d0
   pgtol=0.0d0
 
   !     We specify the number m of limited memory corrections stored.  
@@ -60,7 +60,7 @@ subroutine optimize(ndvar,D,ndvart,fobj,dfdD,low,up,gtol,maximize,outputscreen,f
      !        function f and gradient dfdDtmp values at the current D.
 
      call omp_set_num_threads(omp_get_max_threads())
-     call Eulersolve(D,ndvart,0,fobj,dfdD,dfdDD,1,v,fctindx)
+     call Eulersolve(D,ndvart,2,fobj,dfdD,dfdDD,1,v,fctindx)
 
      dfdDtmp(1:ndvar)=dfdD(1:ndvar)
 
