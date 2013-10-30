@@ -104,7 +104,7 @@
   !     Set initial point, bounds and sigmax for flow variables (aleatory):
   !
 
-  sigmax(N-1)=0.5
+  sigmax(N-1)=0.1
   X(N-1) = 2.0    !alpha in degrees
   X_L(N-1) = 0.0
   X_U(N-1) = 4.0
@@ -116,7 +116,7 @@
   X_U(N-1) = X_U(N-1)*pi/180.0
 
 
-  sigmax(N)=0.05
+  sigmax(N)=0.01
   X(N) = 0.56  !Minf
   X_L(N) = 0.1
   X_U(N) = 0.78
@@ -124,10 +124,10 @@
   !===================================================================
   !(2)     Integer Settings and store into IDAT (check for size above)
   !===================================================================
-       if (id_proc.eq.0) open(unit=76,file='Opt.his',form='formatted',status='replace')
+   
 
        !do 
-       kprob=0 !,4  
+       kprob=1 !,4  
      probtype(:)=1
 
      IDAT(1)=kprob
@@ -194,7 +194,7 @@
      !
      !     Open output files
      !
-
+    if (id_proc.eq.0) open(unit=76,file='Opt.his',form='formatted',status='replace')
 
      IERR = IPOPENOUTPUTFILE(IPROBLEM, 'IPOPT.OUT', 5)
      if (IERR.ne.0 ) then
@@ -266,6 +266,7 @@
      !
      call IPFREE(IPROBLEM)
 
+     if (id_proc.eq.0) close(76)
 
      !
 9990 continue
@@ -274,7 +275,6 @@
 
 !  end do
 
-  if (id_proc.eq.0) close(76)
 
   call stop_all
 
