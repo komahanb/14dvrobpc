@@ -117,19 +117,18 @@
 
 
   sigmax(N)=0.01
-  X(N) = 0.56  !Minf
-  X_L(N) = 0.1
+  X(N) = 0.65  !Minf
+  X_L(N) = 0.6
   X_U(N) = 0.78
   
   !===================================================================
   !(2)     Integer Settings and store into IDAT (check for size above)
   !===================================================================
-   
 
-       !do 
-       kprob=1 !,4  
+     kprob=1
+     
      probtype(:)=1
-
+     
      IDAT(1)=kprob
      IDAT(2)=0
      IDAT(3:N+2)=probtype(1:N)
@@ -194,7 +193,8 @@
      !
      !     Open output files
      !
-    if (id_proc.eq.0) open(unit=76,file='Opt.his',form='formatted',status='replace')
+  
+  if (id_proc.eq.0) open(unit=76,file='Opt.his',form='formatted',status='replace')
 
      IERR = IPOPENOUTPUTFILE(IPROBLEM, 'IPOPT.OUT', 5)
      if (IERR.ne.0 ) then
@@ -258,27 +258,26 @@
         write(*,*) 'Mean drag and its variance:',DAT(N+2),DAT(N+3)
 
      end if
-
      !
 9000 continue
      !
      !     Clean up
      !
+     !
+
      call IPFREE(IPROBLEM)
 
      if (id_proc.eq.0) close(76)
 
-     !
+     call stop_all
+
 9990 continue
      write(*,*) 'Error setting an option'
      goto 9000
 
-!  end do
-
-
-  call stop_all
-
+  
 end program problemPC
+
 !
 ! =============================================================================
 !
@@ -320,7 +319,7 @@ end program problemPC
       NMC=100000
       
 
-      call PCestimate(2,N,x,sigmax,22,0,DAT(1001:1020),1,4,4,0,probtype,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp,fmeandbleprimetmp,fvardbleprimetmp)
+      call PCestimate(2,N,x,sigmax,22,0,DAT(1001:1020),1,2,2,0,probtype,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp,fmeandbleprimetmp,fvardbleprimetmp)
 
       !fvartmp=0.0
       !fvarprimetmp(:)=0.0
@@ -400,7 +399,7 @@ end program problemPC
       NMC=100000
 
 
-      call PCestimate(2,N,x,sigmax,22,4,DAT(1001:1020),1,4,4,0,probtype,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp,fmeandbleprimetmp,fvardbleprimetmp)
+      call PCestimate(2,N,x,sigmax,22,4,DAT(1001:1020),1,2,2,0,probtype,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp,fmeandbleprimetmp,fvardbleprimetmp)
 
       !fvartmp=0.0
       !fvarprimetmp(:)=0.0
@@ -498,7 +497,7 @@ end program problemPC
 
          NMC=100000
 
-      call PCestimate(2,N,x,sigmax,22,0,DAT(1001:1020),1,4,4,0,probtype,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp,fmeandbleprimetmp,fvardbleprimetmp)
+      call PCestimate(2,N,x,sigmax,22,0,DAT(1001:1020),1,2,2,0,probtype,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp,fmeandbleprimetmp,fvardbleprimetmp)
 
 
          !fvartmp=0.0
@@ -598,7 +597,7 @@ end program problemPC
             dc(:,:)=0.0
 
 
-            call PCestimate(2,N,x,sigmax,22,4,DAT(1001:1020),1,4,4,0,probtype,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp,fmeandbleprimetmp,fvardbleprimetmp)
+            call PCestimate(2,N,x,sigmax,22,4,DAT(1001:1020),1,2,2,0,probtype,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp,fmeandbleprimetmp,fvardbleprimetmp)
 
             !fvartmp=0.0
             !fvarprimetmp(:)=0.0
@@ -735,17 +734,19 @@ end program problemPC
 
       if (fctindx.eq.0) then
 
-         call optimize(ndimt-DIM,xtmp,ndimt,ftmp,dftmp,low,up,gtol,.true.,.false.,fctindx)
+!         call optimize(ndimt-DIM,xtmp,ndimt,ftmp,dftmp,low,up,gtol,.true.,.false.,fctindx)
 
       else if (fctindx.eq.4) then
 
-         call optimize(ndimt-DIM,xtmp,ndimt,ftmp,dftmp,low,up,gtol,.false.,.false.,fctindx)
+ !        call optimize(ndimt-DIM,xtmp,ndimt,ftmp,dftmp,low,up,gtol,.false.,.false.,fctindx)
 
       else 
 
          stop'wrong fct indx'
 
       end if
+
+      dftmp=0.0
 
       return
     end subroutine epigrads
