@@ -14,7 +14,7 @@ EXE = MixedOUU
 
 # CHANGEME: Here is the name of all object files corresponding to the source
 #           code that you wrote in order to define the problem statement
-OBJS = problemPC.o BFGSroutines.o optimize.o
+OBJS = problemPC.o BFGSroutines.o optimize.o threebardummy.o
 
 # CHANGEME: Additional libraries
 ADDLIBS =

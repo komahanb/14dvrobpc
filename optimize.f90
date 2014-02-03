@@ -1,141 +1,146 @@
-subroutine optimize(ndvar,D,ndvart,fobj,dfdD,low,up,gtol,maximize,outputscreen,fctindx)
-  use omp_lib
-  implicit none
+      subroutine optimize(ndvar,D,ndvart,fobj,dfdD,low,up,gtol,maximize,outputscreen,fct)
+        use dimpce,only:fcnt,fgcnt,fghcnt
+        use omp_lib
 
-  integer   ::   mmax,ndvar,ndvart,Nouter,maxfev,fctindx
-  parameter      (mmax=100)  !mmax is the maximum number of limited memory corrections.
+        implicit none
 
-  double precision :: D(ndvart),fobj,dfdD(ndvart),dfdDtmp(ndvar),dfdDD(ndvart,ndvart),v(ndvart),gtol,low(ndvar),up(ndvar)
+        integer   ::   mmax,ndvar,ndvart,Nouter,maxfev,fct
+        parameter      (mmax=100)  !mmax is the maximum number of limited memory corrections.
 
-  character*60 :: csave,task
-  logical ::      lsave(4),maximize,outputscreen
-  integer ::      n, mlim, iprint, iwa(3*ndvar), isave(44), nbd(ndvar)
-  double precision :: factr,pgtol,dsave(29),normgrad,dnrm2
-  double precision :: wa(2*mmax*ndvar+4*ndvar+12*mmax*mmax+12*mmax)
+        double precision :: D(ndvart),fobj,dfdD(ndvart),dfdDtmp(ndvar),dfdDD(ndvart,ndvart),v(ndvart),gtol,low(ndvar),up(ndvar)
+ 
+        character*60 :: csave,task
+        logical ::      lsave(4),maximize,outputscreen
+        integer ::      n, mlim, iprint, iwa(3*ndvar), isave(44), nbd(ndvar)
+        double precision :: factr,pgtol,dsave(29),normgrad,dnrm2
+        double precision :: wa(2*mmax*ndvar+4*ndvar+12*mmax*mmax+12*mmax)
+        
 
+        maxfev=100
+        Nouter=100
 
-  maxfev=100
-  Nouter=100
+!     We now provide nbd which defines the bounds on the variables:
+!       nbd(i)=0 if x(i) is unbounded,
+!              1 if x(i) has only a lower bound,
+!              2 if x(i) has both lower and upper bounds, 
+!              3 if x(i) has only an upper bound. 
 
-  !     We now provide nbd which defines the bounds on the variables:
-  !       nbd(i)=0 if x(i) is unbounded,
-  !              1 if x(i) has only a lower bound,
-  !              2 if x(i) has both lower and upper bounds, 
-  !              3 if x(i) has only an upper bound. 
+        do n=1,ndvar
+           nbd(n)=2
+        end do
 
-  do n=1,ndvar
-     nbd(n)=2
-  end do
+!     We suppress the default output.
 
-  !     We suppress the default output.
+        iprint = -1
+     
+!     We suppress both code-supplied stopping tests because the
+!        user is providing his own stopping criteria.
 
-  iprint = -1
+        factr=1.0d+7
+        pgtol=1.0d+7
 
-  !     We suppress both code-supplied stopping tests because the
-  !        user is providing his own stopping criteria.
+!     We specify the number m of limited memory corrections stored.  
+        
+        mlim=mmax
 
-  factr=1.d+7
-  pgtol=1.d+7
+!     We start the iteration by initializing task.
+! 
+        task = 'START'
+        
+!        ------- the beginning of the loop ----------
+ 
+111     continue
 
-  !     We specify the number m of limited memory corrections stored.  
-
-  mlim=mmax
-
-  !     We start the iteration by initializing task.
-  ! 
-  task = 'START'
-
-  !        ------- the beginning of the loop ----------
-
-111 continue
-
-
-  !     This is the call to the L-BFGS-B code.
-
-  call setulb(ndvar,mlim,D,low,up,nbd,fobj,dfdDtmp,factr,pgtol,wa,iwa,task,iprint,csave,lsave,isave,dsave)
-
-
-  if (task(1:2) .eq. 'FG') then
-     !        the minimization routine has returned to request the
-     !        function f and gradient dfdDtmp values at the current D.
-
-     call omp_set_num_threads(omp_get_max_threads())
-     call Eulersolve(D,ndvart,1,fobj,dfdD,dfdDD,1,v,fctindx)
-
-     dfdDtmp(1:ndvar)=dfdD(1:ndvar)
-
-     if (maximize) then
-        fobj=-fobj
-        dfdDtmp(:)=-dfdDtmp(:)
-     end if
+      
+!     This is the call to the L-BFGS-B code.
+ 
+        call setulb(ndvar,mlim,D,low,up,nbd,fobj,dfdDtmp,factr,pgtol,wa,iwa,task,iprint,csave,lsave,isave,dsave)
 
 
-     if (isave(34).eq.0) then
+        if (task(1:2) .eq. 'FG') then
+!        the minimization routine has returned to request the
+!        function f and gradient dfdDtmp values at the current D.
 
-        normgrad = dnrm2(ndvar, dfdDtmp, 1)
+           fcnt=fcnt+1
+           fgcnt=fgcnt+1
 
-        if (normgrad .le. gtol) task='STOP: THE GRADIENT IS SUFFICIENTLY SMALL'
+           call omp_set_num_threads(omp_get_max_threads())
+           call Eulersolve(D,ndvart,1,fobj,dfdD,dfdDD,1,v,fct)
 
-        if(outputscreen) write (*,'(2(a,i5,4x),a,1p,d12.5,4x,a,1p,d12.5)') 'Iter',isave(30),'nfg =',1,'f =',fobj,'|grad| =',normgrad
+           dfdDtmp(1:ndvar)=dfdD(1:ndvar)
 
-     end if
+           if (maximize) then
+              fobj=-fobj
+              dfdDtmp(:)=-dfdDtmp(:)
+           end if
 
-     !        go back to the minimization routine.
-     goto 111
-  endif
+         
+           if (isave(34).eq.0) then
+              
+              normgrad = dnrm2(ndvar, dfdDtmp, 1)
+              
+              if (normgrad .le. gtol) task='STOP: THE GRADIENT IS SUFFICIENTLY SMALL'
+              
+              if(outputscreen) write (*,'(2(a,i5,4x),a,1p,d12.5,4x,a,1p,d12.5)') 'Iter',isave(30),'nfg =',1,'f =',fobj,'|grad| =',normgrad
+              
+           end if
+           
+           !        go back to the minimization routine.
+           goto 111
+        endif
+        
 
+        if (task(1:5) .eq. 'NEW_X') then   
+!     
+!        the minimization routine has returned with a new iterate.
+!        At this point have the opportunity of stopping the iteration 
+!        or observing the values of certain parameters
 
-  if (task(1:5) .eq. 'NEW_X') then   
-     !     
-     !        the minimization routine has returned with a new iterate.
-     !        At this point have the opportunity of stopping the iteration 
-     !        or observing the values of certain parameters
+!        Note: task(1:4) must be assigned the value 'STOP' to terminate  
+!          the iteration and ensure that the final results are
+!          printed in the default format. The rest of the character
+!          string TASK may be used to store other information.
 
-     !        Note: task(1:4) must be assigned the value 'STOP' to terminate  
-     !          the iteration and ensure that the final results are
-     !          printed in the default format. The rest of the character
-     !          string TASK may be used to store other information.
+           if (isave(34) .gt. maxfev) task='STOP: TOTAL NO. of f EVALUATIONS EXCEEDS LIMIT'
+           
+           if (isave(30) .ge. Nouter) task='STOP: TOTAL NO. OF OUTER ITERATIONS EXCEEDS LIMIT'
 
-     if (isave(34) .gt. maxfev) task='STOP: TOTAL NO. of f EVALUATIONS EXCEEDS LIMIT'
+           normgrad = dnrm2(ndvar, dfdDtmp, 1)
+           
+           if (normgrad .le. gtol) task='STOP: THE GRADIENT IS SUFFICIENTLY SMALL'
 
-     if (isave(30) .ge. Nouter) task='STOP: TOTAL NO. OF OUTER ITERATIONS EXCEEDS LIMIT'
+!        We now wish to print the following information at each
+!        iteration:
+!        
+!          1) the current iteration number, isave(30),
+!          2) the total number of f and g evaluations, isave(34),
+!          3) the value of the objective function fobj,
+!          4) the norm of the projected gradient,  dsave(13)
+         
+           if(outputscreen) write (*,'(2(a,i5,4x),a,1p,d12.5,4x,a,1p,d12.5)') 'Iter',isave(30),'nfg =',isave(34),'f =',fobj,'|grad| =',normgrad
 
-     normgrad = dnrm2(ndvar, dfdDtmp, 1)
+ 
+           !        go back to the minimization routine.
+           goto 111
+           
+        endif
 
-     if (normgrad .le. gtol) task='STOP: THE GRADIENT IS SUFFICIENTLY SMALL'
+        if (maximize) then
+           fobj=-fobj
+        end if
 
-     !        We now wish to print the following information at each
-     !        iteration:
-     !        
-     !          1) the current iteration number, isave(30),
-     !          2) the total number of f and g evaluations, isave(34),
-     !          3) the value of the objective function fobj,
-     !          4) the norm of the projected gradient,  dsave(13)
+        if(outputscreen) write(*,*) task
 
-     if(outputscreen) write (*,'(2(a,i5,4x),a,1p,d12.5,4x,a,1p,d12.5)') 'Iter',isave(30),'nfg =',isave(34),'f =',fobj,'|grad| =',normgrad
+        if (task(1:5) .ne. 'CONVE') then
+           write(*,*)
+           write(*,*) 'Problem in epistemic optimization!'
+           write(*,*)
+           write(*,*) task
+           write(*,*)
+           stop
+        end if
 
-
-     !        go back to the minimization routine.
-     goto 111
-
-  endif
-
-  if (maximize) then
-     fobj=-fobj
-  end if
-
-  if(outputscreen) write(*,*) task
-
-  if (task(1:5) .ne. 'CONVE') then
-     write(*,*)
-     write(*,*) 'Problem in epistemic optimization!'
-     write(*,*)
-     write(*,*) task
-     write(*,*)
-     stop
-  end if
-
-end subroutine optimize
+      end subroutine optimize
 
 
 
