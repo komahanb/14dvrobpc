@@ -131,7 +131,7 @@
   !(2)     Integer Settings and store into IDAT (check for size above)
   !===================================================================
 
-     kprob=0
+     kprob=4
      
      probtype(:)=1
      
