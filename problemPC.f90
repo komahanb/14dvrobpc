@@ -131,7 +131,7 @@
   !(2)     Integer Settings and store into IDAT (check for size above)
   !===================================================================
 
-     kprob=4
+     kprob=0
      
      probtype(:)=1
      
@@ -200,10 +200,10 @@
      !     Open output files
      !
   
-  if (id_proc.eq.0) open(unit=76,file='Opt.his',form='formatted',status='replace')
+     if (id_proc.eq.0) open(unit=76,file='Opt.his',form='formatted',status='replace')
 
 
-   if (id_proc.eq.0) open(unit=86,file='beta.his',form='formatted',status='replace')
+     if (id_proc.eq.0) open(unit=86,file='beta.his',form='formatted',status='replace')
 
      IERR = IPOPENOUTPUTFILE(IPROBLEM, 'IPOPT.OUT', 5)
      if (IERR.ne.0 ) then
@@ -329,7 +329,7 @@ end program problemPC
       NMC=100000
       
 
-      call PCestimate(2,N,x,sigmax,22,0,DAT(1001:1020),1,2,2,0,probtype,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp,fmeandbleprimetmp,fvardbleprimetmp)
+      call PCestimate(2,N,x,sigmax,22,0,DAT(1001:1020),2,2,2,0,probtype,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp,fmeandbleprimetmp,fvardbleprimetmp)
 
       !fvartmp=0.0
       !fvarprimetmp(:)=0.0
@@ -409,7 +409,7 @@ end program problemPC
       NMC=100000
 
 
-      call PCestimate(2,N,x,sigmax,22,4,DAT(1001:1020),1,2,2,0,probtype,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp,fmeandbleprimetmp,fvardbleprimetmp)
+      call PCestimate(2,N,x,sigmax,22,4,DAT(1001:1020),2,2,2,0,probtype,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp,fmeandbleprimetmp,fvardbleprimetmp)
 
       !fvartmp=0.0
       !fvarprimetmp(:)=0.0
@@ -509,7 +509,7 @@ end program problemPC
 
          NMC=100000
 
-      call PCestimate(2,N,x,sigmax,22,0,DAT(1001:1020),1,2,2,0,probtype,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp,fmeandbleprimetmp,fvardbleprimetmp)
+      call PCestimate(2,N,x,sigmax,22,0,DAT(1001:1020),2,2,2,0,probtype,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp,fmeandbleprimetmp,fvardbleprimetmp)
 
 
          !fvartmp=0.0
@@ -609,7 +609,7 @@ end program problemPC
             dc(:,:)=0.0
 
 
-            call PCestimate(2,N,x,sigmax,22,4,DAT(1001:1020),1,2,2,0,probtype,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp,fmeandbleprimetmp,fvardbleprimetmp)
+            call PCestimate(2,N,x,sigmax,22,4,DAT(1001:1020),2,2,2,0,probtype,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp,fmeandbleprimetmp,fvardbleprimetmp)
 
             !fvartmp=0.0
             !fvarprimetmp(:)=0.0
@@ -700,7 +700,7 @@ end program problemPC
       integer ALG_MODE, ITER_COUNT, LS_TRIAL
       double precision OBJVAL, INF_PR, INF_DU, MU, DNORM, REGU_SIZE
       double precision ALPHA_DU, ALPHA_PR
-      double precision DAT(*)
+      double precision DAT(*),tol
       integer IDAT(*)
       integer ISTOP
 
@@ -719,13 +719,19 @@ end program problemPC
          write(*,'(i5,5e15.7)') ITER_COUNT,OBJVAL,DNORM,INF_PR,INF_DU,MU
          write(76,'(i5,5e15.7,3i8)') ITER_COUNT,OBJVAL,DNORM,INF_PR,INF_DU,MU,fcnt,fgcnt,fghcnt
          write(86,'(i5,2e15.7)') ITER_COUNT,OBJVAL,DAT(1020+1)
+         
+      end if
+
+      if (ITER_COUNT .gt. 1 ) then
+
+         open(unit=59,file='dnorm.inp',status='old')
+         read(59,*) tol
+         close(59)
+
+         if (DNORM.le.tol) ISTOP = 1  
 
       end if
-!
-!     And set ISTOP to 1 if you want Ipopt to stop now.  Below is just a
-!     simple example.
-!
-      if (ITER_COUNT .gt. 1 .and. DNORM.le.1D-04) ISTOP = 1
+
 
       return
       end
@@ -759,7 +765,7 @@ end program problemPC
 
       end if
 
-      dftmp=0.0
+      dftmp(:)=0.0
 
       return
     end subroutine epigrads

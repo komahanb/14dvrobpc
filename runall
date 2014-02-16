@@ -1,15 +1,16 @@
-make
-mpiexec -np 1 ./MixedOUU  |tee screen
-./save.sh
+#make
+#mpiexec -np 1 ./MixedOUU  |tee screen
+#./save.sh
 
-sed -i 's/kprob=0/kprob=1/' problemPC.f90
-sed -i 's/kprob0/kprob1/' save.sh
-make
-mpiexec -np 1 ./MixedOUU  |tee screen
-./save.sh
+#sed -i 's/kprob=0/kprob=1/' problemPC.f90
+#sed -i 's/kprob0/kprob1/' save.sh
+#make
+#mpiexec -np 1 ./MixedOUU  |tee screen
+#./save.sh
 
-sed -i 's/kprob=1/kprob=2/' problemPC.f90
-sed -i 's/kprob1/kprob2/' save.sh
+#sed -i 's/kprob=1/kprob=2/' problemPC.f90
+#sed -i 's/kprob1/kprob2/' save.sh
+
 make
 mpiexec -np 1 ./MixedOUU  |tee screen
 ./save.sh

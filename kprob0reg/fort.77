@@ -1,0 +1,4100 @@
+ 
+ =======================================================
+ Non-Intrusive Polynomial Chaos (Stochastic Collocation)
+ =======================================================
+ Author: Komahan Boopathy, University of Dayton, OH
+ Email : komahan.cool@gmail.com
+ =======================================================
+ 
+ 
+ =================================================
+          Summary of function requirements        
+ =================================================
+ 
+ >> Number of Function evals needed :          10
+ 
+ >> Initial Sample Points by Latin Hypercube
+ >> Including center of the domain
+ >> Training points are written to file :samp/sampdim02ord03Fmirdyn                                  
+ 
+ =================================================
+         Matrix Setup & Pseudo-Inverse            
+ =================================================
+ 
+  >> Number of columns in the matrix (nterms):          10
+  >> Number of rows    in the matrix  (numpc):          10
+     >> Solver : LU Decomposition
+     >> Finding Pseudo-Inverse of the matrix . . . 
+ 
+ =================================================
+                 RHS Setup                        
+ =================================================
+ 
+ >> Cost Function Number :          22
+     >> Setting up the RHS with Function evals . . .
+     >> Number of RHS entries :          10
+ 
+           1  0.324151140683172     
+           2  0.285459961849360     
+           3  0.318404296858730     
+           4  0.330660990400872     
+           5  0.328813706786306     
+           6  0.366319974930210     
+           7  0.309267003485935     
+           8  0.368653665044214     
+           9  0.268791638432599     
+          10  0.331107224376885     
+ 
+ =================================================
+             Solve Linear System                  
+ =================================================
+ 
+ >> Solving for the coefficients . . . 
+           1  -311.803862814348     
+           2   15286.2026438358     
+           3  -328.765675819172     
+           4  -256.812126548710     
+           5  -15.2443723401492     
+           6  -48.6869322687832     
+           7   5072.62237366942     
+           8  -435.641267656401     
+           9   51.6913876895926     
+          10   25.5615649764150     
+ >> Coeffs are succesfully determined . . .
+ >> Number of coefficients :           10
+ 
+ 
+ =================================================
+             MONTE-CARLO on Surrogate             
+ =================================================
+ 
+ 
+      >> # of Monte-Carlo Samples =    50000
+      >> Writing        50000  Monte-Carlo samples to MCSampCFD04.dat
+           >> [         1     50000 ] for Processor  0
+ 
+      >> Fct,  Function index:  22   4
+ 
+      >> xavg     0.34907E-01    0.65000E+00
+      >> xstd     0.17453E-02    0.10000E-01
+ 
+      >> Mean, Var, SD  =     0.32442E+00    0.30819E-03    0.17555E-01
+ 
+      >> Meanprime =     0.94713E+01    0.58625E+00
+      >> Varprime =     0.15090E-02    0.19536E-02
+ 
+      >> Meandbleprime = 
+           -0.17551E+02    0.21541E+02
+            0.21541E+02    0.59250E+01
+      >> Vardbleprime = 
+            0.17578E+01    0.65371E-01
+           -0.28015E-01    0.34119E-01
+ 
+      >> Range of X(min) =    0.027   0.607
+      >> Range of X(max) =    0.042   0.699
+      >> Ymax/min =     0.39940E+00    0.24989E+00
+      >> Output Histogram  [    0.24989E+00 :    0.39940E+00 ]
+ 
+ 
+ >> Program call is successful
+ 
+ 
+ =======================================================
+ Non-Intrusive Polynomial Chaos (Stochastic Collocation)
+ =======================================================
+ Author: Komahan Boopathy, University of Dayton, OH
+ Email : komahan.cool@gmail.com
+ =======================================================
+ 
+ 
+ =================================================
+          Summary of function requirements        
+ =================================================
+ 
+ >> Number of Function evals needed :          10
+ 
+ >> Initial Sample Points by Latin Hypercube
+ >> Including center of the domain
+ >> Training points are written to file :samp/sampdim02ord03Fmirdyn                                  
+ 
+ =================================================
+         Matrix Setup & Pseudo-Inverse            
+ =================================================
+ 
+  >> Number of columns in the matrix (nterms):          10
+  >> Number of rows    in the matrix  (numpc):          10
+     >> Solver : LU Decomposition
+     >> Finding Pseudo-Inverse of the matrix . . . 
+ 
+ =================================================
+                 RHS Setup                        
+ =================================================
+ 
+ >> Cost Function Number :          22
+     >> Setting up the RHS with Function evals . . .
+     >> Number of RHS entries :          10
+ 
+           1  2.605411976360487E-003
+           2  2.847383731819378E-003
+           3  2.568992665213122E-003
+           4  2.395760517096382E-003
+           5  2.730466282119148E-003
+           6  2.454202289877397E-003
+           7  2.514812279832680E-003
+           8  3.016164669953070E-003
+           9  2.632746908231924E-003
+          10  2.575264327936741E-003
+ 
+ =================================================
+             Solve Linear System                  
+ =================================================
+ 
+ >> Solving for the coefficients . . . 
+           1  -83.2497156698103     
+           2   101.173367053936     
+           3   125.267904230650     
+           4  -81.8922118761547     
+           5  -7.83922093533631     
+           6  -1.12009251561783     
+           7   32.0374470101710     
+           8   122.648533617553     
+           9 -0.210731156184420     
+          10  0.591567712917083     
+ >> Coeffs are succesfully determined . . .
+ >> Number of coefficients :           10
+ 
+ 
+ =================================================
+             MONTE-CARLO on Surrogate             
+ =================================================
+ 
+ 
+      >> # of Monte-Carlo Samples =    50000
+      >> Writing        50000  Monte-Carlo samples to MCSampCFD00.dat
+           >> [         1     50000 ] for Processor  0
+ 
+      >> Fct,  Function index:  22   0
+ 
+      >> xavg     0.34907E-01    0.65000E+00
+      >> xstd     0.17453E-02    0.10000E-01
+ 
+      >> Mean, Var, SD  =     0.26116E-02    0.11325E-07    0.10642E-03
+ 
+      >> Meanprime =     0.53054E-01    0.51508E-02
+      >> Varprime =     0.12909E-05    0.20520E-06
+ 
+      >> Meandbleprime = 
+            0.23686E+01    0.44931E+00
+            0.44931E+00    0.52217E-01
+      >> Vardbleprime = 
+            0.42408E-03    0.18973E-03
+            0.81137E-04    0.59455E-05
+ 
+      >> Range of X(min) =    0.027   0.607
+      >> Range of X(max) =    0.042   0.693
+      >> Ymax/min =     0.32970E-02    0.20960E-02
+      >> Output Histogram  [    0.20960E-02 :    0.32970E-02 ]
+ 
+ 
+ >> Program call is successful
+ 
+ 
+ =======================================================
+ Non-Intrusive Polynomial Chaos (Stochastic Collocation)
+ =======================================================
+ Author: Komahan Boopathy, University of Dayton, OH
+ Email : komahan.cool@gmail.com
+ =======================================================
+ 
+ 
+ =================================================
+          Summary of function requirements        
+ =================================================
+ 
+ >> Number of Function evals needed :          10
+ 
+ >> Initial Sample Points by Latin Hypercube
+ >> Including center of the domain
+ >> Training points are written to file :samp/sampdim02ord03Fmirdyn                                  
+ 
+ =================================================
+         Matrix Setup & Pseudo-Inverse            
+ =================================================
+ 
+  >> Number of columns in the matrix (nterms):          10
+  >> Number of rows    in the matrix  (numpc):          10
+     >> Solver : LU Decomposition
+     >> Finding Pseudo-Inverse of the matrix . . . 
+ 
+ =================================================
+                 RHS Setup                        
+ =================================================
+ 
+ >> Cost Function Number :          22
+     >> Setting up the RHS with Function evals . . .
+     >> Number of RHS entries :          10
+ 
+           1  2.605411976360631E-003
+           2  2.750149456771097E-003
+           3  2.675616193860399E-003
+           4  2.689878027698499E-003
+           5  2.681692705260154E-003
+           6  2.806477825366569E-003
+           7  2.289138959350331E-003
+           8  2.403224519408890E-003
+           9  2.588321948743737E-003
+          10  2.685493108150929E-003
+ 
+ =================================================
+             Solve Linear System                  
+ =================================================
+ 
+ >> Solving for the coefficients . . . 
+           1  -106.328643962342     
+           2  -1304.79466717980     
+           3   234.392329568594     
+           4  -106.545460092829     
+           5  -40.6802629495175     
+           6  0.448151791555957     
+           7  -446.914610784366     
+           8   235.548550551305     
+           9   19.1695356763205     
+          10 -0.485258008551664     
+ >> Coeffs are succesfully determined . . .
+ >> Number of coefficients :           10
+ 
+ 
+ =================================================
+             MONTE-CARLO on Surrogate             
+ =================================================
+ 
+ 
+      >> # of Monte-Carlo Samples =    50000
+      >> Writing        50000  Monte-Carlo samples to MCSampCFD00.dat
+           >> [         1     50000 ] for Processor  0
+ 
+      >> Fct,  Function index:  22   0
+ 
+      >> xavg     0.34907E-01    0.65000E+00
+      >> xstd     0.17453E-02    0.10000E-01
+ 
+      >> Mean, Var, SD  =     0.26217E-02    0.10893E-07    0.10437E-03
+ 
+      >> Meanprime =     0.51318E-01    0.45415E-02
+      >> Varprime =     0.78338E-06    0.52396E-06
+ 
+      >> Meandbleprime = 
+           -0.47937E+00    0.68453E+00
+            0.68453E+00    0.34208E+00
+      >> Vardbleprime = 
+           -0.10604E-03    0.48829E-03
+            0.21059E-03    0.38542E-04
+ 
+      >> Range of X(min) =    0.028   0.608
+      >> Range of X(max) =    0.043   0.696
+      >> Ymax/min =     0.35542E-02    0.21781E-02
+      >> Output Histogram  [    0.21781E-02 :    0.35542E-02 ]
+ 
+ 
+ >> Program call is successful
+ 
+ 
+ =======================================================
+ Non-Intrusive Polynomial Chaos (Stochastic Collocation)
+ =======================================================
+ Author: Komahan Boopathy, University of Dayton, OH
+ Email : komahan.cool@gmail.com
+ =======================================================
+ 
+ 
+ =================================================
+          Summary of function requirements        
+ =================================================
+ 
+ >> Number of Function evals needed :          10
+ 
+ >> Initial Sample Points by Latin Hypercube
+ >> Including center of the domain
+ >> Training points are written to file :samp/sampdim02ord03Fmirdyn                                  
+ 
+ =================================================
+         Matrix Setup & Pseudo-Inverse            
+ =================================================
+ 
+  >> Number of columns in the matrix (nterms):          10
+  >> Number of rows    in the matrix  (numpc):          10
+     >> Solver : LU Decomposition
+     >> Finding Pseudo-Inverse of the matrix . . . 
+ 
+ =================================================
+                 RHS Setup                        
+ =================================================
+ 
+ >> Cost Function Number :          22
+     >> Setting up the RHS with Function evals . . .
+     >> Number of RHS entries :          10
+ 
+           1  0.645712053044638     
+           2  0.645981779611050     
+           3  0.722107517137490     
+           4  0.570480311167120     
+           5  0.649730851316025     
+           6  0.692075673640422     
+           7  0.646306761812548     
+           8  0.641218916836293     
+           9  0.629996989444061     
+          10  0.627902072275179     
+ 
+ =================================================
+             Solve Linear System                  
+ =================================================
+ 
+ >> Solving for the coefficients . . . 
+           1  -3675.87640113916     
+           2  -76498.3317230162     
+           3   11359.3353001023     
+           4  -4429.12197662954     
+           5  -654.674942920862     
+           6   668.044184209824     
+           7  -25476.8845853707     
+           8   12747.5314947752     
+           9  -535.123672470551     
+          10  -321.257647265667     
+ >> Coeffs are succesfully determined . . .
+ >> Number of coefficients :           10
+ 
+ 
+ =================================================
+             MONTE-CARLO on Surrogate             
+ =================================================
+ 
+ 
+      >> # of Monte-Carlo Samples =    50000
+      >> Writing        50000  Monte-Carlo samples to MCSampCFD04.dat
+           >> [         1     50000 ] for Processor  0
+ 
+      >> Fct,  Function index:  22   4
+ 
+      >> xavg     0.53121E-01    0.66325E+00
+      >> xstd     0.17453E-02    0.10000E-01
+ 
+      >> Mean, Var, SD  =     0.64565E+00    0.42416E-03    0.20595E-01
+ 
+      >> Meanprime =     0.95657E+01    0.12026E+01
+      >> Varprime =    -0.64433E-02   -0.44382E-03
+ 
+      >> Meandbleprime = 
+           -0.68876E+02   -0.10184E+02
+           -0.10184E+02    0.79407E+00
+      >> Vardbleprime = 
+           -0.21023E+01    0.19030E+01
+            0.12724E+01   -0.48089E+00
+ 
+      >> Range of X(min) =    0.046   0.622
+      >> Range of X(max) =    0.061   0.707
+      >> Ymax/min =     0.72860E+00    0.56058E+00
+      >> Output Histogram  [    0.56058E+00 :    0.72860E+00 ]
+ 
+ 
+ >> Program call is successful
+ 
+ 
+ =======================================================
+ Non-Intrusive Polynomial Chaos (Stochastic Collocation)
+ =======================================================
+ Author: Komahan Boopathy, University of Dayton, OH
+ Email : komahan.cool@gmail.com
+ =======================================================
+ 
+ 
+ =================================================
+          Summary of function requirements        
+ =================================================
+ 
+ >> Number of Function evals needed :          10
+ 
+ >> Initial Sample Points by Latin Hypercube
+ >> Including center of the domain
+ >> Training points are written to file :samp/sampdim02ord03Fmirdyn                                  
+ 
+ =================================================
+         Matrix Setup & Pseudo-Inverse            
+ =================================================
+ 
+  >> Number of columns in the matrix (nterms):          10
+  >> Number of rows    in the matrix  (numpc):          10
+     >> Solver : LU Decomposition
+     >> Finding Pseudo-Inverse of the matrix . . . 
+ 
+ =================================================
+                 RHS Setup                        
+ =================================================
+ 
+ >> Cost Function Number :          22
+     >> Setting up the RHS with Function evals . . .
+     >> Number of RHS entries :          10
+ 
+           1  5.827897689038026E-003
+           2  8.443569116980729E-003
+           3  4.911866983483624E-003
+           4  4.404127749478614E-003
+           5  4.749876596949976E-003
+           6  6.839684144047907E-003
+           7  4.901952614650158E-003
+           8  1.025538494578869E-002
+           9  8.453293083056366E-003
+          10  6.824245589282605E-003
+ 
+ =================================================
+             Solve Linear System                  
+ =================================================
+ 
+ >> Solving for the coefficients . . . 
+           1   867.300504212430     
+           2  -15350.3715549565     
+           3   9.46364810146422     
+           4   1006.46208094386     
+           5  -326.681364904454     
+           6  -119.745929289006     
+           7  -5224.90425373117     
+           8  -239.504979040537     
+           9   273.472452956676     
+          10   54.3126801848424     
+ >> Coeffs are succesfully determined . . .
+ >> Number of coefficients :           10
+ 
+ 
+ =================================================
+             MONTE-CARLO on Surrogate             
+ =================================================
+ 
+ 
+      >> # of Monte-Carlo Samples =    50000
+      >> Writing        50000  Monte-Carlo samples to MCSampCFD00.dat
+           >> [         1     50000 ] for Processor  0
+ 
+      >> Fct,  Function index:  22   0
+ 
+      >> xavg     0.53121E-01    0.66325E+00
+      >> xstd     0.17453E-02    0.10000E-01
+ 
+      >> Mean, Var, SD  =     0.61580E-02    0.19451E-05    0.13947E-02
+ 
+      >> Meanprime =     0.29789E+00    0.12046E+00
+      >> Varprime =     0.32823E-03    0.17818E-03
+ 
+      >> Meandbleprime = 
+            0.29901E+02    0.10633E+02
+            0.10633E+02    0.56993E+01
+      >> Vardbleprime = 
+           -0.28255E-01    0.52445E-01
+            0.20710E-01    0.17250E-01
+ 
+      >> Range of X(min) =    0.045   0.620
+      >> Range of X(max) =    0.060   0.704
+      >> Ymax/min =     0.20757E-01    0.22965E-02
+      >> Output Histogram  [    0.22965E-02 :    0.20757E-01 ]
+ 
+ 
+ >> Program call is successful
+ 
+ 
+ =======================================================
+ Non-Intrusive Polynomial Chaos (Stochastic Collocation)
+ =======================================================
+ Author: Komahan Boopathy, University of Dayton, OH
+ Email : komahan.cool@gmail.com
+ =======================================================
+ 
+ 
+ =================================================
+          Summary of function requirements        
+ =================================================
+ 
+ >> Number of Function evals needed :          10
+ 
+ >> Initial Sample Points by Latin Hypercube
+ >> Including center of the domain
+ >> Training points are written to file :samp/sampdim02ord03Fmirdyn                                  
+ 
+ =================================================
+         Matrix Setup & Pseudo-Inverse            
+ =================================================
+ 
+  >> Number of columns in the matrix (nterms):          10
+  >> Number of rows    in the matrix  (numpc):          10
+     >> Solver : LU Decomposition
+     >> Finding Pseudo-Inverse of the matrix . . . 
+ 
+ =================================================
+                 RHS Setup                        
+ =================================================
+ 
+ >> Cost Function Number :          22
+     >> Setting up the RHS with Function evals . . .
+     >> Number of RHS entries :          10
+ 
+           1  0.638740462985976     
+           2  0.687080238470433     
+           3  0.650633010908301     
+           4  0.652781707395430     
+           5  0.631402304111554     
+           6  0.594772039355723     
+           7  0.664579360543084     
+           8  0.621923382198042     
+           9  0.655808942188279     
+          10  0.613575356197523     
+ 
+ =================================================
+             Solve Linear System                  
+ =================================================
+ 
+ >> Solving for the coefficients . . . 
+           1   5195.92264732230     
+           2  -20852.4501390406     
+           3  -6401.68832460862     
+           4   4981.06730196253     
+           5   2201.46597899139     
+           6   161.101412041163     
+           7  -6231.89091032528     
+           8  -6090.99579999288     
+           9  -1177.00295315836     
+          10  -48.5027405300915     
+ >> Coeffs are succesfully determined . . .
+ >> Number of coefficients :           10
+ 
+ 
+ =================================================
+             MONTE-CARLO on Surrogate             
+ =================================================
+ 
+ 
+      >> # of Monte-Carlo Samples =    50000
+      >> Writing        50000  Monte-Carlo samples to MCSampCFD04.dat
+           >> [         1     50000 ] for Processor  0
+ 
+      >> Fct,  Function index:  22   4
+ 
+      >> xavg     0.52956E-01    0.65828E+00
+      >> xstd     0.17453E-02    0.10000E-01
+ 
+      >> Mean, Var, SD  =     0.63898E+00    0.44505E-03    0.21096E-01
+ 
+      >> Meanprime =     0.96614E+01    0.12681E+01
+      >> Varprime =    -0.57105E-03    0.19032E-02
+ 
+      >> Meandbleprime = 
+           -0.37112E+02    0.67613E+01
+            0.67613E+01    0.59734E+01
+      >> Vardbleprime = 
+           -0.51099E+01   -0.11366E+01
+           -0.12998E+01   -0.19903E+00
+ 
+      >> Range of X(min) =    0.046   0.614
+      >> Range of X(max) =    0.060   0.701
+      >> Ymax/min =     0.72049E+00    0.55758E+00
+      >> Output Histogram  [    0.55758E+00 :    0.72049E+00 ]
+ 
+ 
+ >> Program call is successful
+ 
+ 
+ =======================================================
+ Non-Intrusive Polynomial Chaos (Stochastic Collocation)
+ =======================================================
+ Author: Komahan Boopathy, University of Dayton, OH
+ Email : komahan.cool@gmail.com
+ =======================================================
+ 
+ 
+ =================================================
+          Summary of function requirements        
+ =================================================
+ 
+ >> Number of Function evals needed :          10
+ 
+ >> Initial Sample Points by Latin Hypercube
+ >> Including center of the domain
+ >> Training points are written to file :samp/sampdim02ord03Fmirdyn                                  
+ 
+ =================================================
+         Matrix Setup & Pseudo-Inverse            
+ =================================================
+ 
+  >> Number of columns in the matrix (nterms):          10
+  >> Number of rows    in the matrix  (numpc):          10
+     >> Solver : LU Decomposition
+     >> Finding Pseudo-Inverse of the matrix . . . 
+ 
+ =================================================
+                 RHS Setup                        
+ =================================================
+ 
+ >> Cost Function Number :          22
+     >> Setting up the RHS with Function evals . . .
+     >> Number of RHS entries :          10
+ 
+           1  5.123579091178083E-003
+           2  4.168033998797204E-003
+           3  4.437011904657454E-003
+           4  4.980335403056075E-003
+           5  4.424114974719518E-003
+           6  8.924925588454646E-003
+           7  6.174245540044841E-003
+           8  6.492899249162050E-003
+           9  8.756619434660570E-003
+          10  5.341289189664145E-003
+ 
+ =================================================
+             Solve Linear System                  
+ =================================================
+ 
+ >> Solving for the coefficients . . . 
+           1  -1101.67683321023     
+           2   16180.9997063419     
+           3   380.832053330606     
+           4  -1081.01894774195     
+           5   205.796981702146     
+           6  -19.8901889862786     
+           7   5457.07658073200     
+           8   326.904745991219     
+           9  -177.798723147117     
+          10   15.9361108542034     
+ >> Coeffs are succesfully determined . . .
+ >> Number of coefficients :           10
+ 
+ 
+ =================================================
+             MONTE-CARLO on Surrogate             
+ =================================================
+ 
+ 
+      >> # of Monte-Carlo Samples =    50000
+      >> Writing        50000  Monte-Carlo samples to MCSampCFD00.dat
+           >> [         1     50000 ] for Processor  0
+ 
+      >> Fct,  Function index:  22   0
+ 
+      >> xavg     0.52956E-01    0.65828E+00
+      >> xstd     0.17453E-02    0.10000E-01
+ 
+      >> Mean, Var, SD  =     0.53433E-02    0.83092E-06    0.91155E-03
+ 
+      >> Meanprime =     0.23608E+00    0.73903E-01
+      >> Varprime =     0.85005E-04    0.75851E-04
+ 
+      >> Meandbleprime = 
+            0.22751E+01    0.63385E+01
+            0.63385E+01    0.43308E+01
+      >> Vardbleprime = 
+            0.76211E-01    0.15360E-01
+           -0.15166E-03    0.50639E-02
+ 
+      >> Range of X(min) =    0.046   0.616
+      >> Range of X(max) =    0.061   0.706
+      >> Ymax/min =     0.15044E-01    0.15483E-02
+      >> Output Histogram  [    0.15483E-02 :    0.15044E-01 ]
+ 
+ 
+ >> Program call is successful
+ 
+ 
+ =======================================================
+ Non-Intrusive Polynomial Chaos (Stochastic Collocation)
+ =======================================================
+ Author: Komahan Boopathy, University of Dayton, OH
+ Email : komahan.cool@gmail.com
+ =======================================================
+ 
+ 
+ =================================================
+          Summary of function requirements        
+ =================================================
+ 
+ >> Number of Function evals needed :          10
+ 
+ >> Initial Sample Points by Latin Hypercube
+ >> Including center of the domain
+ >> Training points are written to file :samp/sampdim02ord03Fmirdyn                                  
+ 
+ =================================================
+         Matrix Setup & Pseudo-Inverse            
+ =================================================
+ 
+  >> Number of columns in the matrix (nterms):          10
+  >> Number of rows    in the matrix  (numpc):          10
+     >> Solver : LU Decomposition
+     >> Finding Pseudo-Inverse of the matrix . . . 
+ 
+ =================================================
+                 RHS Setup                        
+ =================================================
+ 
+ >> Cost Function Number :          22
+     >> Setting up the RHS with Function evals . . .
+     >> Number of RHS entries :          10
+ 
+           1  0.629490750485126     
+           2  0.557993613556619     
+           3  0.677253301978477     
+           4  0.702793315687469     
+           5  0.600693089328379     
+           6  0.674484425564785     
+           7  0.618550989717764     
+           8  0.588597234321932     
+           9  0.616989645102624     
+          10  0.649224183621926     
+ 
+ =================================================
+             Solve Linear System                  
+ =================================================
+ 
+ >> Solving for the coefficients . . . 
+           1  -3358.56698905844     
+           2  -40571.7593042300     
+           3   8124.33891635799     
+           4  -3420.74430596033     
+           5   1911.51602460770     
+           6   37.7856076920875     
+           7  -12684.3717631510     
+           8   8089.91351684915     
+           9  -2074.15224456121     
+          10   36.5321063942803     
+ >> Coeffs are succesfully determined . . .
+ >> Number of coefficients :           10
+ 
+ 
+ =================================================
+             MONTE-CARLO on Surrogate             
+ =================================================
+ 
+ 
+      >> # of Monte-Carlo Samples =    50000
+      >> Writing        50000  Monte-Carlo samples to MCSampCFD04.dat
+           >> [         1     50000 ] for Processor  0
+ 
+      >> Fct,  Function index:  22   4
+ 
+      >> xavg     0.50813E-01    0.65125E+00
+      >> xstd     0.17453E-02    0.10000E-01
+ 
+      >> Mean, Var, SD  =     0.62961E+00    0.47097E-03    0.21702E-01
+ 
+      >> Meanprime =     0.98916E+01    0.13051E+01
+      >> Varprime =    -0.17650E-02    0.38038E-02
+ 
+      >> Meandbleprime = 
+           -0.17159E+03    0.32085E+02
+            0.32085E+02    0.75307E+01
+      >> Vardbleprime = 
+            0.40130E+00    0.65025E+00
+           -0.78481E-01   -0.16221E+00
+ 
+      >> Range of X(min) =    0.044   0.609
+      >> Range of X(max) =    0.058   0.695
+      >> Ymax/min =     0.72218E+00    0.53802E+00
+      >> Output Histogram  [    0.53802E+00 :    0.72218E+00 ]
+ 
+ 
+ >> Program call is successful
+ 
+ 
+ =======================================================
+ Non-Intrusive Polynomial Chaos (Stochastic Collocation)
+ =======================================================
+ Author: Komahan Boopathy, University of Dayton, OH
+ Email : komahan.cool@gmail.com
+ =======================================================
+ 
+ 
+ =================================================
+          Summary of function requirements        
+ =================================================
+ 
+ >> Number of Function evals needed :          10
+ 
+ >> Initial Sample Points by Latin Hypercube
+ >> Including center of the domain
+ >> Training points are written to file :samp/sampdim02ord03Fmirdyn                                  
+ 
+ =================================================
+         Matrix Setup & Pseudo-Inverse            
+ =================================================
+ 
+  >> Number of columns in the matrix (nterms):          10
+  >> Number of rows    in the matrix  (numpc):          10
+     >> Solver : LU Decomposition
+     >> Finding Pseudo-Inverse of the matrix . . . 
+ 
+ =================================================
+                 RHS Setup                        
+ =================================================
+ 
+ >> Cost Function Number :          22
+     >> Setting up the RHS with Function evals . . .
+     >> Number of RHS entries :          10
+ 
+           1  4.602829292916092E-003
+           2  4.037970153646773E-003
+           3  4.491711398565233E-003
+           4  7.312532095019744E-003
+           5  5.864142311718488E-003
+           6  4.215180821980268E-003
+           7  4.386809550875696E-003
+           8  4.540258200203671E-003
+           9  7.815605341561681E-003
+          10  4.131930501722989E-003
+ 
+ =================================================
+             Solve Linear System                  
+ =================================================
+ 
+ >> Solving for the coefficients . . . 
+           1  -867.880413855638     
+           2  -6107.99217824488     
+           3   1817.99841835188     
+           4  -824.776044033646     
+           5  -229.915524810292     
+           6  -35.4658275241080     
+           7  -2089.58793646452     
+           8   1736.46233302186     
+           9   44.8785875029763     
+          10   17.9901244212850     
+ >> Coeffs are succesfully determined . . .
+ >> Number of coefficients :           10
+ 
+ 
+ =================================================
+             MONTE-CARLO on Surrogate             
+ =================================================
+ 
+ 
+      >> # of Monte-Carlo Samples =    50000
+      >> Writing        50000  Monte-Carlo samples to MCSampCFD00.dat
+           >> [         1     50000 ] for Processor  0
+ 
+      >> Fct,  Function index:  22   0
+ 
+      >> xavg     0.50813E-01    0.65125E+00
+      >> xstd     0.17453E-02    0.10000E-01
+ 
+      >> Mean, Var, SD  =     0.47617E-02    0.32090E-06    0.56648E-03
+ 
+      >> Meanprime =     0.10199E+00    0.43461E-01
+      >> Varprime =     0.46240E-04    0.41347E-04
+ 
+      >> Meandbleprime = 
+           -0.24884E+02    0.50102E+01
+            0.50102E+01    0.39257E+01
+      >> Vardbleprime = 
+            0.40223E-01    0.20829E-01
+            0.64785E-02    0.44835E-02
+ 
+      >> Range of X(min) =    0.044   0.609
+      >> Range of X(max) =    0.058   0.694
+      >> Ymax/min =     0.11642E-01    0.22736E-02
+      >> Output Histogram  [    0.22736E-02 :    0.11642E-01 ]
+ 
+ 
+ >> Program call is successful
+ 
+ 
+ =======================================================
+ Non-Intrusive Polynomial Chaos (Stochastic Collocation)
+ =======================================================
+ Author: Komahan Boopathy, University of Dayton, OH
+ Email : komahan.cool@gmail.com
+ =======================================================
+ 
+ 
+ =================================================
+          Summary of function requirements        
+ =================================================
+ 
+ >> Number of Function evals needed :          10
+ 
+ >> Initial Sample Points by Latin Hypercube
+ >> Including center of the domain
+ >> Training points are written to file :samp/sampdim02ord03Fmirdyn                                  
+ 
+ =================================================
+         Matrix Setup & Pseudo-Inverse            
+ =================================================
+ 
+  >> Number of columns in the matrix (nterms):          10
+  >> Number of rows    in the matrix  (numpc):          10
+     >> Solver : LU Decomposition
+     >> Finding Pseudo-Inverse of the matrix . . . 
+ 
+ =================================================
+                 RHS Setup                        
+ =================================================
+ 
+ >> Cost Function Number :          22
+     >> Setting up the RHS with Function evals . . .
+     >> Number of RHS entries :          10
+ 
+           1  0.622462957270830     
+           2  0.638581905722791     
+           3  0.598600161230805     
+           4  0.656385145457594     
+           5  0.634889953286234     
+           6  0.551438355905723     
+           7  0.597169678912029     
+           8  0.592619007847795     
+           9  0.694231675453962     
+          10  0.648004807564169     
+ 
+ =================================================
+             Solve Linear System                  
+ =================================================
+ 
+ >> Solving for the coefficients . . . 
+           1  -3818.88216080150     
+           2   32915.1557473888     
+           3   3284.25836994485     
+           4  -4049.19464339723     
+           5   865.316223648629     
+           6   195.693993933650     
+           7   11307.6866026876     
+           8   3657.71004329746     
+           9  -930.990723231504     
+          10  -74.1480907254991     
+ >> Coeffs are succesfully determined . . .
+ >> Number of coefficients :           10
+ 
+ 
+ =================================================
+             MONTE-CARLO on Surrogate             
+ =================================================
+ 
+ 
+      >> # of Monte-Carlo Samples =    50000
+      >> Writing        50000  Monte-Carlo samples to MCSampCFD04.dat
+           >> [         1     50000 ] for Processor  0
+ 
+      >> Fct,  Function index:  22   4
+ 
+      >> xavg     0.50418E-01    0.64434E+00
+      >> xstd     0.17453E-02    0.10000E-01
+ 
+      >> Mean, Var, SD  =     0.62306E+00    0.44456E-03    0.21085E-01
+ 
+      >> Meanprime =     0.97097E+01    0.12517E+01
+      >> Varprime =     0.10746E-01    0.46718E-02
+ 
+      >> Meandbleprime = 
+            0.35879E+02    0.34394E+02
+            0.34394E+02    0.10851E+02
+      >> Vardbleprime = 
+            0.61948E+01    0.32040E+00
+            0.24615E-02   -0.18582E+00
+ 
+      >> Range of X(min) =    0.041   0.603
+      >> Range of X(max) =    0.058   0.689
+      >> Ymax/min =     0.71589E+00    0.53709E+00
+      >> Output Histogram  [    0.53709E+00 :    0.71589E+00 ]
+ 
+ 
+ >> Program call is successful
+ 
+ 
+ =======================================================
+ Non-Intrusive Polynomial Chaos (Stochastic Collocation)
+ =======================================================
+ Author: Komahan Boopathy, University of Dayton, OH
+ Email : komahan.cool@gmail.com
+ =======================================================
+ 
+ 
+ =================================================
+          Summary of function requirements        
+ =================================================
+ 
+ >> Number of Function evals needed :          10
+ 
+ >> Initial Sample Points by Latin Hypercube
+ >> Including center of the domain
+ >> Training points are written to file :samp/sampdim02ord03Fmirdyn                                  
+ 
+ =================================================
+         Matrix Setup & Pseudo-Inverse            
+ =================================================
+ 
+  >> Number of columns in the matrix (nterms):          10
+  >> Number of rows    in the matrix  (numpc):          10
+     >> Solver : LU Decomposition
+     >> Finding Pseudo-Inverse of the matrix . . . 
+ 
+ =================================================
+                 RHS Setup                        
+ =================================================
+ 
+ >> Cost Function Number :          22
+     >> Setting up the RHS with Function evals . . .
+     >> Number of RHS entries :          10
+ 
+           1  4.439562534882885E-003
+           2  4.388749091424319E-003
+           3  3.991144911509952E-003
+           4  4.928473955069257E-003
+           5  4.341722358123202E-003
+           6  4.447616653193038E-003
+           7  5.449514762864459E-003
+           8  4.436840786445101E-003
+           9  4.379597074998862E-003
+          10  4.699828009537356E-003
+ 
+ =================================================
+             Solve Linear System                  
+ =================================================
+ 
+ >> Solving for the coefficients . . . 
+           1   116.135933211979     
+           2  -2256.44886326461     
+           3   23.4867452109882     
+           4   174.564073474546     
+           5  -117.747241577796     
+           6  -50.4767804129887     
+           7  -794.713081987917     
+           8  -83.0477766760242     
+           9   98.9418430507680     
+          10   23.7964873923295     
+ >> Coeffs are succesfully determined . . .
+ >> Number of coefficients :           10
+ 
+ 
+ =================================================
+             MONTE-CARLO on Surrogate             
+ =================================================
+ 
+ 
+      >> # of Monte-Carlo Samples =    50000
+      >> Writing        50000  Monte-Carlo samples to MCSampCFD00.dat
+           >> [         1     50000 ] for Processor  0
+ 
+      >> Fct,  Function index:  22   0
+ 
+      >> xavg     0.50418E-01    0.64434E+00
+      >> xstd     0.17453E-02    0.10000E-01
+ 
+      >> Mean, Var, SD  =     0.44933E-02    0.98853E-07    0.31441E-03
+ 
+      >> Meanprime =     0.10606E+00    0.23434E-01
+      >> Varprime =     0.94272E-05    0.72546E-05
+ 
+      >> Meandbleprime = 
+            0.17000E+01    0.13830E+01
+            0.13830E+01    0.10215E+01
+      >> Vardbleprime = 
+           -0.28463E-02    0.18473E-02
+            0.12684E-02    0.12452E-02
+ 
+      >> Range of X(min) =    0.043   0.603
+      >> Range of X(max) =    0.058   0.686
+      >> Ymax/min =     0.81854E-02    0.29486E-02
+      >> Output Histogram  [    0.29486E-02 :    0.81854E-02 ]
+ 
+ 
+ >> Program call is successful
+ 
+ 
+ =======================================================
+ Non-Intrusive Polynomial Chaos (Stochastic Collocation)
+ =======================================================
+ Author: Komahan Boopathy, University of Dayton, OH
+ Email : komahan.cool@gmail.com
+ =======================================================
+ 
+ 
+ =================================================
+          Summary of function requirements        
+ =================================================
+ 
+ >> Number of Function evals needed :          10
+ 
+ >> Initial Sample Points by Latin Hypercube
+ >> Including center of the domain
+ >> Training points are written to file :samp/sampdim02ord03Fmirdyn                                  
+ 
+ =================================================
+         Matrix Setup & Pseudo-Inverse            
+ =================================================
+ 
+  >> Number of columns in the matrix (nterms):          10
+  >> Number of rows    in the matrix  (numpc):          10
+     >> Solver : LU Decomposition
+     >> Finding Pseudo-Inverse of the matrix . . . 
+ 
+ =================================================
+                 RHS Setup                        
+ =================================================
+ 
+ >> Cost Function Number :          22
+     >> Setting up the RHS with Function evals . . .
+     >> Number of RHS entries :          10
+ 
+           1  0.600656371161625     
+           2  0.605223452082003     
+           3  0.597315945668900     
+           4  0.587633554843427     
+           5  0.668320721336750     
+           6  0.646036816237998     
+           7  0.601234981134220     
+           8  0.594211529937707     
+           9  0.558274856057740     
+          10  0.602061165921917     
+ 
+ =================================================
+             Solve Linear System                  
+ =================================================
+ 
+ >> Solving for the coefficients . . . 
+           1  -133.084651535682     
+           2  -3466.87935242533     
+           3   485.620069689437     
+           4  -96.2788306589431     
+           5  -135.285933755863     
+           6  -32.4672675152188     
+           7  -1204.06133085964     
+           8   411.859644705505     
+           9   96.2027729854107     
+          10   17.6383137478996     
+ >> Coeffs are succesfully determined . . .
+ >> Number of coefficients :           10
+ 
+ 
+ =================================================
+             MONTE-CARLO on Surrogate             
+ =================================================
+ 
+ 
+      >> # of Monte-Carlo Samples =    50000
+      >> Writing        50000  Monte-Carlo samples to MCSampCFD04.dat
+           >> [         1     50000 ] for Processor  0
+ 
+      >> Fct,  Function index:  22   4
+ 
+      >> xavg     0.42360E-01    0.62437E+00
+      >> xstd     0.17453E-02    0.10000E-01
+ 
+      >> Mean, Var, SD  =     0.60115E+00    0.37049E-03    0.19248E-01
+ 
+      >> Meanprime =     0.92832E+01    0.10343E+01
+      >> Varprime =     0.50081E-02    0.30558E-02
+ 
+      >> Meandbleprime = 
+            0.15730E+02    0.19740E+02
+            0.19740E+02    0.92931E+01
+      >> Vardbleprime = 
+           -0.15759E+00    0.16717E+00
+            0.10631E+00    0.52627E-01
+ 
+      >> Range of X(min) =    0.034   0.583
+      >> Range of X(max) =    0.050   0.666
+      >> Ymax/min =     0.69652E+00    0.51132E+00
+      >> Output Histogram  [    0.51132E+00 :    0.69652E+00 ]
+ 
+ 
+ >> Program call is successful
+ 
+ 
+ =======================================================
+ Non-Intrusive Polynomial Chaos (Stochastic Collocation)
+ =======================================================
+ Author: Komahan Boopathy, University of Dayton, OH
+ Email : komahan.cool@gmail.com
+ =======================================================
+ 
+ 
+ =================================================
+          Summary of function requirements        
+ =================================================
+ 
+ >> Number of Function evals needed :          10
+ 
+ >> Initial Sample Points by Latin Hypercube
+ >> Including center of the domain
+ >> Training points are written to file :samp/sampdim02ord03Fmirdyn                                  
+ 
+ =================================================
+         Matrix Setup & Pseudo-Inverse            
+ =================================================
+ 
+  >> Number of columns in the matrix (nterms):          10
+  >> Number of rows    in the matrix  (numpc):          10
+     >> Solver : LU Decomposition
+     >> Finding Pseudo-Inverse of the matrix . . . 
+ 
+ =================================================
+                 RHS Setup                        
+ =================================================
+ 
+ >> Cost Function Number :          22
+     >> Setting up the RHS with Function evals . . .
+     >> Number of RHS entries :          10
+ 
+           1  4.077806654824987E-003
+           2  4.678667156450402E-003
+           3  4.054330945894780E-003
+           4  4.314022357670375E-003
+           5  4.097917608764786E-003
+           6  4.328163179014073E-003
+           7  4.061014362937540E-003
+           8  3.536317459571628E-003
+           9  4.339766016898939E-003
+          10  3.720433851667815E-003
+ 
+ =================================================
+             Solve Linear System                  
+ =================================================
+ 
+ >> Solving for the coefficients . . . 
+           1   4.26768478526594     
+           2  -383.410982891315     
+           3   23.4549057392565     
+           4   9.44827755927230     
+           5  -7.65057464931732     
+           6  -4.55179851761325     
+           7  -130.289086748940     
+           8   13.4626478412422     
+           9   5.59351013425876     
+          10   2.34557173879763     
+ >> Coeffs are succesfully determined . . .
+ >> Number of coefficients :           10
+ 
+ 
+ =================================================
+             MONTE-CARLO on Surrogate             
+ =================================================
+ 
+ 
+      >> # of Monte-Carlo Samples =    50000
+      >> Writing        50000  Monte-Carlo samples to MCSampCFD00.dat
+           >> [         1     50000 ] for Processor  0
+ 
+      >> Fct,  Function index:  22   0
+ 
+      >> xavg     0.42360E-01    0.62437E+00
+      >> xstd     0.17453E-02    0.10000E-01
+ 
+      >> Mean, Var, SD  =     0.40897E-02    0.31590E-07    0.17774E-03
+ 
+      >> Meanprime =     0.77139E-01    0.11411E-01
+      >> Varprime =     0.23244E-05    0.61327E-06
+ 
+      >> Meandbleprime = 
+            0.25940E+01    0.47486E+00
+            0.47486E+00    0.15737E+00
+      >> Vardbleprime = 
+           -0.21316E-03    0.13249E-03
+            0.46852E-04    0.46051E-04
+ 
+      >> Range of X(min) =    0.035   0.581
+      >> Range of X(max) =    0.050   0.666
+      >> Ymax/min =     0.53408E-02    0.34437E-02
+      >> Output Histogram  [    0.34437E-02 :    0.53408E-02 ]
+ 
+ 
+ >> Program call is successful
+ 
+ 
+ =======================================================
+ Non-Intrusive Polynomial Chaos (Stochastic Collocation)
+ =======================================================
+ Author: Komahan Boopathy, University of Dayton, OH
+ Email : komahan.cool@gmail.com
+ =======================================================
+ 
+ 
+ =================================================
+          Summary of function requirements        
+ =================================================
+ 
+ >> Number of Function evals needed :          10
+ 
+ >> Initial Sample Points by Latin Hypercube
+ >> Including center of the domain
+ >> Training points are written to file :samp/sampdim02ord03Fmirdyn                                  
+ 
+ =================================================
+         Matrix Setup & Pseudo-Inverse            
+ =================================================
+ 
+  >> Number of columns in the matrix (nterms):          10
+  >> Number of rows    in the matrix  (numpc):          10
+     >> Solver : LU Decomposition
+     >> Finding Pseudo-Inverse of the matrix . . . 
+ 
+ =================================================
+                 RHS Setup                        
+ =================================================
+ 
+ >> Cost Function Number :          22
+     >> Setting up the RHS with Function evals . . .
+     >> Number of RHS entries :          10
+ 
+           1  0.599829200995380     
+           2  0.625146941390227     
+           3  0.578573863384027     
+           4  0.584151444575175     
+           5  0.605985068878987     
+           6  0.563513175590843     
+           7  0.603735382795718     
+           8  0.624735798663798     
+           9  0.632559953958141     
+          10  0.594207703044063     
+ 
+ =================================================
+             Solve Linear System                  
+ =================================================
+ 
+ >> Solving for the coefficients . . . 
+           1  -30.3002671335421     
+           2   289.365200655643     
+           3   63.9571819336644     
+           4   8.03539325525612     
+           5  -49.3427144345919     
+           6  -34.6126508467782     
+           7   71.9339713555030     
+           8  -16.2209964583212     
+           9   55.1289041971161     
+          10   19.9718323115262     
+ >> Coeffs are succesfully determined . . .
+ >> Number of coefficients :           10
+ 
+ 
+ =================================================
+             MONTE-CARLO on Surrogate             
+ =================================================
+ 
+ 
+      >> # of Monte-Carlo Samples =    50000
+      >> Writing        50000  Monte-Carlo samples to MCSampCFD04.dat
+           >> [         1     50000 ] for Processor  0
+ 
+      >> Fct,  Function index:  22   4
+ 
+      >> xavg     0.34964E-01    0.60845E+00
+      >> xstd     0.17453E-02    0.10000E-01
+ 
+      >> Mean, Var, SD  =     0.60022E+00    0.33143E-03    0.18205E-01
+ 
+      >> Meanprime =     0.89628E+01    0.93041E+00
+      >> Varprime =     0.37175E-02    0.23193E-02
+ 
+      >> Meandbleprime = 
+            0.11422E+02    0.16609E+02
+            0.16609E+02    0.75404E+01
+      >> Vardbleprime = 
+            0.73599E-01    0.74773E-01
+            0.31909E-01    0.41475E-01
+ 
+      >> Range of X(min) =    0.027   0.565
+      >> Range of X(max) =    0.042   0.650
+      >> Ymax/min =     0.68526E+00    0.52718E+00
+      >> Output Histogram  [    0.52718E+00 :    0.68526E+00 ]
+ 
+ 
+ >> Program call is successful
+ 
+ 
+ =======================================================
+ Non-Intrusive Polynomial Chaos (Stochastic Collocation)
+ =======================================================
+ Author: Komahan Boopathy, University of Dayton, OH
+ Email : komahan.cool@gmail.com
+ =======================================================
+ 
+ 
+ =================================================
+          Summary of function requirements        
+ =================================================
+ 
+ >> Number of Function evals needed :          10
+ 
+ >> Initial Sample Points by Latin Hypercube
+ >> Including center of the domain
+ >> Training points are written to file :samp/sampdim02ord03Fmirdyn                                  
+ 
+ =================================================
+         Matrix Setup & Pseudo-Inverse            
+ =================================================
+ 
+  >> Number of columns in the matrix (nterms):          10
+  >> Number of rows    in the matrix  (numpc):          10
+     >> Solver : LU Decomposition
+     >> Finding Pseudo-Inverse of the matrix . . . 
+ 
+ =================================================
+                 RHS Setup                        
+ =================================================
+ 
+ >> Cost Function Number :          22
+     >> Setting up the RHS with Function evals . . .
+     >> Number of RHS entries :          10
+ 
+           1  3.934793280592420E-003
+           2  3.678711553508996E-003
+           3  4.000597733566289E-003
+           4  4.315578441012545E-003
+           5  3.868264622357582E-003
+           6  3.539450565799946E-003
+           7  3.758784496414114E-003
+           8  4.293275142191936E-003
+           9  4.188917130949378E-003
+          10  3.978807234316150E-003
+ 
+ =================================================
+             Solve Linear System                  
+ =================================================
+ 
+ >> Solving for the coefficients . . . 
+           1  0.129685488959309     
+           2  -9.25684767040662     
+           3   1.87111085533746     
+           4  0.878775454245704     
+           5  -1.48170074186594     
+           6 -0.672829222582314     
+           7  -3.68947732346253     
+           8  0.337830833736110     
+           9   1.43318577582042     
+          10  0.378144815868587     
+ >> Coeffs are succesfully determined . . .
+ >> Number of coefficients :           10
+ 
+ 
+ =================================================
+             MONTE-CARLO on Surrogate             
+ =================================================
+ 
+ 
+      >> # of Monte-Carlo Samples =    50000
+      >> Writing        50000  Monte-Carlo samples to MCSampCFD00.dat
+           >> [         1     50000 ] for Processor  0
+ 
+      >> Fct,  Function index:  22   0
+ 
+      >> xavg     0.34964E-01    0.60845E+00
+      >> xstd     0.17453E-02    0.10000E-01
+ 
+      >> Mean, Var, SD  =     0.39437E-02    0.24764E-07    0.15737E-03
+ 
+      >> Meanprime =     0.69842E-01    0.97602E-02
+      >> Varprime =     0.11680E-05    0.39338E-06
+ 
+      >> Meandbleprime = 
+            0.13947E+01    0.28595E+00
+            0.28595E+00    0.13504E+00
+      >> Vardbleprime = 
+            0.20434E-04    0.34560E-04
+            0.10192E-04    0.99502E-05
+ 
+      >> Range of X(min) =    0.028   0.567
+      >> Range of X(max) =    0.042   0.650
+      >> Ymax/min =     0.46643E-02    0.33841E-02
+      >> Output Histogram  [    0.33841E-02 :    0.46643E-02 ]
+ 
+ 
+ >> Program call is successful
+ 
+ 
+ =======================================================
+ Non-Intrusive Polynomial Chaos (Stochastic Collocation)
+ =======================================================
+ Author: Komahan Boopathy, University of Dayton, OH
+ Email : komahan.cool@gmail.com
+ =======================================================
+ 
+ 
+ =================================================
+          Summary of function requirements        
+ =================================================
+ 
+ >> Number of Function evals needed :          10
+ 
+ >> Initial Sample Points by Latin Hypercube
+ >> Including center of the domain
+ >> Training points are written to file :samp/sampdim02ord03Fmirdyn                                  
+ 
+ =================================================
+         Matrix Setup & Pseudo-Inverse            
+ =================================================
+ 
+  >> Number of columns in the matrix (nterms):          10
+  >> Number of rows    in the matrix  (numpc):          10
+     >> Solver : LU Decomposition
+     >> Finding Pseudo-Inverse of the matrix . . . 
+ 
+ =================================================
+                 RHS Setup                        
+ =================================================
+ 
+ >> Cost Function Number :          22
+     >> Setting up the RHS with Function evals . . .
+     >> Number of RHS entries :          10
+ 
+           1  0.601528770420764     
+           2  0.640452543928571     
+           3  0.580924324834565     
+           4  0.587960031013029     
+           5  0.628585003721625     
+           6  0.611372919249628     
+           7  0.570828414032389     
+           8  0.660774750990010     
+           9  0.555891254805577     
+          10  0.592436470113457     
+ 
+ =================================================
+             Solve Linear System                  
+ =================================================
+ 
+ >> Solving for the coefficients . . . 
+           1  -42.6759972895338     
+           2  -558.207926714872     
+           3   127.752435195978     
+           4  -5.18565191125706     
+           5  -101.346339339422     
+           6  -33.6887888618805     
+           7  -229.190494265694     
+           8   50.0320449320117     
+           9   94.6276798423983     
+          10   19.1686057985284     
+ >> Coeffs are succesfully determined . . .
+ >> Number of coefficients :           10
+ 
+ 
+ =================================================
+             MONTE-CARLO on Surrogate             
+ =================================================
+ 
+ 
+      >> # of Monte-Carlo Samples =    50000
+      >> Writing        50000  Monte-Carlo samples to MCSampCFD04.dat
+           >> [         1     50000 ] for Processor  0
+ 
+      >> Fct,  Function index:  22   4
+ 
+      >> xavg     0.30587E-01    0.60077E+00
+      >> xstd     0.17453E-02    0.10000E-01
+ 
+      >> Mean, Var, SD  =     0.60192E+00    0.32547E-03    0.18041E-01
+ 
+      >> Meanprime =     0.88890E+01    0.92191E+00
+      >> Varprime =     0.32618E-02    0.22235E-02
+ 
+      >> Meandbleprime = 
+            0.76824E+01    0.15412E+02
+            0.15412E+02    0.75062E+01
+      >> Vardbleprime = 
+           -0.77784E-02    0.88403E-01
+            0.53034E-01    0.44219E-01
+ 
+      >> Range of X(min) =    0.023   0.559
+      >> Range of X(max) =    0.038   0.643
+      >> Ymax/min =     0.69025E+00    0.53439E+00
+      >> Output Histogram  [    0.53439E+00 :    0.69025E+00 ]
+ 
+ 
+ >> Program call is successful
+ 
+ 
+ =======================================================
+ Non-Intrusive Polynomial Chaos (Stochastic Collocation)
+ =======================================================
+ Author: Komahan Boopathy, University of Dayton, OH
+ Email : komahan.cool@gmail.com
+ =======================================================
+ 
+ 
+ =================================================
+          Summary of function requirements        
+ =================================================
+ 
+ >> Number of Function evals needed :          10
+ 
+ >> Initial Sample Points by Latin Hypercube
+ >> Including center of the domain
+ >> Training points are written to file :samp/sampdim02ord03Fmirdyn                                  
+ 
+ =================================================
+         Matrix Setup & Pseudo-Inverse            
+ =================================================
+ 
+  >> Number of columns in the matrix (nterms):          10
+  >> Number of rows    in the matrix  (numpc):          10
+     >> Solver : LU Decomposition
+     >> Finding Pseudo-Inverse of the matrix . . . 
+ 
+ =================================================
+                 RHS Setup                        
+ =================================================
+ 
+ >> Cost Function Number :          22
+     >> Setting up the RHS with Function evals . . .
+     >> Number of RHS entries :          10
+ 
+           1  4.033683171889993E-003
+           2  4.150254933120464E-003
+           3  4.508481118842307E-003
+           4  4.213276700530211E-003
+           5  3.784219309114850E-003
+           6  3.632275402632340E-003
+           7  3.987296435728939E-003
+           8  4.034388851589006E-003
+           9  4.093296705151875E-003
+          10  4.158881855226767E-003
+ 
+ =================================================
+             Solve Linear System                  
+ =================================================
+ 
+ >> Solving for the coefficients . . . 
+           1  -5.87606698341845     
+           2   66.8305373502601     
+           3   7.91756006497008     
+           4  -4.89356348497854     
+           5  -1.86092899210342     
+           6 -0.881202066101112     
+           7   21.5579495072411     
+           8   5.88429403156888     
+           9   1.48611546483257     
+          10  0.504712060461389     
+ >> Coeffs are succesfully determined . . .
+ >> Number of coefficients :           10
+ 
+ 
+ =================================================
+             MONTE-CARLO on Surrogate             
+ =================================================
+ 
+ 
+      >> # of Monte-Carlo Samples =    50000
+      >> Writing        50000  Monte-Carlo samples to MCSampCFD00.dat
+           >> [         1     50000 ] for Processor  0
+ 
+      >> Fct,  Function index:  22   0
+ 
+      >> xavg     0.30587E-01    0.60077E+00
+      >> xstd     0.17453E-02    0.10000E-01
+ 
+      >> Mean, Var, SD  =     0.40430E-02    0.24190E-07    0.15553E-03
+ 
+      >> Meanprime =     0.66708E-01    0.10190E-01
+      >> Varprime =     0.10974E-05    0.42399E-06
+ 
+      >> Meandbleprime = 
+            0.12394E+01    0.28465E+00
+            0.28465E+00    0.14779E+00
+      >> Vardbleprime = 
+            0.10292E-03    0.36924E-04
+            0.15863E-04    0.12389E-04
+ 
+      >> Range of X(min) =    0.023   0.559
+      >> Range of X(max) =    0.038   0.644
+      >> Ymax/min =     0.49042E-02    0.34942E-02
+      >> Output Histogram  [    0.34942E-02 :    0.49042E-02 ]
+ 
+ 
+ >> Program call is successful
+ 
+ 
+ =======================================================
+ Non-Intrusive Polynomial Chaos (Stochastic Collocation)
+ =======================================================
+ Author: Komahan Boopathy, University of Dayton, OH
+ Email : komahan.cool@gmail.com
+ =======================================================
+ 
+ 
+ =================================================
+          Summary of function requirements        
+ =================================================
+ 
+ >> Number of Function evals needed :          10
+ 
+ >> Initial Sample Points by Latin Hypercube
+ >> Including center of the domain
+ >> Training points are written to file :samp/sampdim02ord03Fmirdyn                                  
+ 
+ =================================================
+         Matrix Setup & Pseudo-Inverse            
+ =================================================
+ 
+  >> Number of columns in the matrix (nterms):          10
+  >> Number of rows    in the matrix  (numpc):          10
+     >> Solver : LU Decomposition
+     >> Finding Pseudo-Inverse of the matrix . . . 
+ 
+ =================================================
+                 RHS Setup                        
+ =================================================
+ 
+ >> Cost Function Number :          22
+     >> Setting up the RHS with Function evals . . .
+     >> Number of RHS entries :          10
+ 
+           1  0.602178225050355     
+           2  0.656031032433432     
+           3  0.623481993168640     
+           4  0.578928871378161     
+           5  0.598554178584578     
+           6  0.603809173189273     
+           7  0.622077163365237     
+           8  0.565999651895557     
+           9  0.618725126297107     
+          10  0.561036618102262     
+ 
+ =================================================
+             Solve Linear System                  
+ =================================================
+ 
+ >> Solving for the coefficients . . . 
+           1   215.453845435153     
+           2  -4543.96596095014     
+           3  -95.7236784842177     
+           4   273.635618663283     
+           5  -96.9733576079962     
+           6  -52.2563239714426     
+           7  -1557.74480943384     
+           8  -214.955766161481     
+           9   104.189315172754     
+          10   29.3093000724859     
+ >> Coeffs are succesfully determined . . .
+ >> Number of coefficients :           10
+ 
+ 
+ =================================================
+             MONTE-CARLO on Surrogate             
+ =================================================
+ 
+ 
+      >> # of Monte-Carlo Samples =    50000
+      >> Writing        50000  Monte-Carlo samples to MCSampCFD04.dat
+           >> [         1     50000 ] for Processor  0
+ 
+      >> Fct,  Function index:  22   4
+ 
+      >> xavg     0.30634E-01    0.60079E+00
+      >> xstd     0.17453E-02    0.10000E-01
+ 
+      >> Mean, Var, SD  =     0.60256E+00    0.32483E-03    0.18023E-01
+ 
+      >> Meanprime =     0.88889E+01    0.92234E+00
+      >> Varprime =     0.29168E-02    0.22040E-02
+ 
+      >> Meandbleprime = 
+            0.26680E+01    0.15049E+02
+            0.15049E+02    0.75234E+01
+      >> Vardbleprime = 
+           -0.53682E+00    0.61741E-01
+            0.27947E-01    0.56466E-01
+ 
+      >> Range of X(min) =    0.022   0.558
+      >> Range of X(max) =    0.039   0.642
+      >> Ymax/min =     0.67977E+00    0.53204E+00
+      >> Output Histogram  [    0.53204E+00 :    0.67977E+00 ]
+ 
+ 
+ >> Program call is successful
+ 
+ 
+ =======================================================
+ Non-Intrusive Polynomial Chaos (Stochastic Collocation)
+ =======================================================
+ Author: Komahan Boopathy, University of Dayton, OH
+ Email : komahan.cool@gmail.com
+ =======================================================
+ 
+ 
+ =================================================
+          Summary of function requirements        
+ =================================================
+ 
+ >> Number of Function evals needed :          10
+ 
+ >> Initial Sample Points by Latin Hypercube
+ >> Including center of the domain
+ >> Training points are written to file :samp/sampdim02ord03Fmirdyn                                  
+ 
+ =================================================
+         Matrix Setup & Pseudo-Inverse            
+ =================================================
+ 
+  >> Number of columns in the matrix (nterms):          10
+  >> Number of rows    in the matrix  (numpc):          10
+     >> Solver : LU Decomposition
+     >> Finding Pseudo-Inverse of the matrix . . . 
+ 
+ =================================================
+                 RHS Setup                        
+ =================================================
+ 
+ >> Cost Function Number :          22
+     >> Setting up the RHS with Function evals . . .
+     >> Number of RHS entries :          10
+ 
+           1  4.039030775206985E-003
+           2  4.074814488013011E-003
+           3  3.685807624568842E-003
+           4  4.281513011098458E-003
+           5  3.913150351442615E-003
+           6  4.345350584918484E-003
+           7  3.917218924334571E-003
+           8  4.547950959089633E-003
+           9  3.911236677495944E-003
+          10  3.919766469323703E-003
+ 
+ =================================================
+             Solve Linear System                  
+ =================================================
+ 
+ >> Solving for the coefficients . . . 
+           1   4.88962464817095     
+           2  -43.3966212705909     
+           3  -4.10850420214681     
+           4   6.27019677323346     
+           5  -1.85108132448215     
+           6  -1.24065625377566     
+           7  -15.2864652004100     
+           8  -6.92597937282966     
+           9   2.14446175372907     
+          10  0.694964684986407     
+ >> Coeffs are succesfully determined . . .
+ >> Number of coefficients :           10
+ 
+ 
+ =================================================
+             MONTE-CARLO on Surrogate             
+ =================================================
+ 
+ 
+      >> # of Monte-Carlo Samples =    50000
+      >> Writing        50000  Monte-Carlo samples to MCSampCFD00.dat
+           >> [         1     50000 ] for Processor  0
+ 
+      >> Fct,  Function index:  22   0
+ 
+      >> xavg     0.30634E-01    0.60079E+00
+      >> xstd     0.17453E-02    0.10000E-01
+ 
+      >> Mean, Var, SD  =     0.40489E-02    0.24163E-07    0.15544E-03
+ 
+      >> Meanprime =     0.66504E-01    0.10291E-01
+      >> Varprime =     0.11898E-05    0.44736E-06
+ 
+      >> Meandbleprime = 
+            0.14086E+01    0.30133E+00
+            0.30133E+00    0.15524E+00
+      >> Vardbleprime = 
+           -0.34973E-04    0.33720E-04
+            0.87494E-05    0.15838E-04
+ 
+      >> Range of X(min) =    0.023   0.556
+      >> Range of X(max) =    0.038   0.644
+      >> Ymax/min =     0.49616E-02    0.34847E-02
+      >> Output Histogram  [    0.34847E-02 :    0.49616E-02 ]
+ 
+ 
+ >> Program call is successful
+ 
+ 
+ =======================================================
+ Non-Intrusive Polynomial Chaos (Stochastic Collocation)
+ =======================================================
+ Author: Komahan Boopathy, University of Dayton, OH
+ Email : komahan.cool@gmail.com
+ =======================================================
+ 
+ 
+ =================================================
+          Summary of function requirements        
+ =================================================
+ 
+ >> Number of Function evals needed :          10
+ 
+ >> Initial Sample Points by Latin Hypercube
+ >> Including center of the domain
+ >> Training points are written to file :samp/sampdim02ord03Fmirdyn                                  
+ 
+ =================================================
+         Matrix Setup & Pseudo-Inverse            
+ =================================================
+ 
+  >> Number of columns in the matrix (nterms):          10
+  >> Number of rows    in the matrix  (numpc):          10
+     >> Solver : LU Decomposition
+     >> Finding Pseudo-Inverse of the matrix . . . 
+ 
+ =================================================
+                 RHS Setup                        
+ =================================================
+ 
+ >> Cost Function Number :          22
+     >> Setting up the RHS with Function evals . . .
+     >> Number of RHS entries :          10
+ 
+           1  0.600726877736896     
+           2  0.566848549177193     
+           3  0.626173084932125     
+           4  0.633482970253761     
+           5  0.570554930171524     
+           6  0.561930247655906     
+           7  0.632270618572397     
+           8  0.614737087890289     
+           9  0.618469821005819     
+          10  0.603099256780321     
+ 
+ =================================================
+             Solve Linear System                  
+ =================================================
+ 
+ >> Solving for the coefficients . . . 
+           1   344.006924071246     
+           2  -4813.27449987186     
+           3  -335.530740648206     
+           4   398.842909485416     
+           5  -57.4832070505227     
+           6  -49.5460009878783     
+           7  -1634.75926630364     
+           8  -449.842893561076     
+           9   79.7013538095145     
+          10   28.4470266457969     
+ >> Coeffs are succesfully determined . . .
+ >> Number of coefficients :           10
+ 
+ 
+ =================================================
+             MONTE-CARLO on Surrogate             
+ =================================================
+ 
+ 
+      >> # of Monte-Carlo Samples =    50000
+      >> Writing        50000  Monte-Carlo samples to MCSampCFD04.dat
+           >> [         1     50000 ] for Processor  0
+ 
+      >> Fct,  Function index:  22   4
+ 
+      >> xavg     0.25551E-01    0.60271E+00
+      >> xstd     0.17453E-02    0.10000E-01
+ 
+      >> Mean, Var, SD  =     0.60113E+00    0.33408E-03    0.18278E-01
+ 
+      >> Meanprime =     0.89263E+01    0.94776E+00
+      >> Varprime =     0.32405E-02    0.23625E-02
+ 
+      >> Meandbleprime = 
+            0.48215E+01    0.15602E+02
+            0.15602E+02    0.78519E+01
+      >> Vardbleprime = 
+           -0.65588E+00    0.31853E-01
+           -0.44757E-02    0.55411E-01
+ 
+      >> Range of X(min) =    0.018   0.560
+      >> Range of X(max) =    0.033   0.645
+      >> Ymax/min =     0.68733E+00    0.53054E+00
+      >> Output Histogram  [    0.53054E+00 :    0.68733E+00 ]
+ 
+ 
+ >> Program call is successful
+ 
+ 
+ =======================================================
+ Non-Intrusive Polynomial Chaos (Stochastic Collocation)
+ =======================================================
+ Author: Komahan Boopathy, University of Dayton, OH
+ Email : komahan.cool@gmail.com
+ =======================================================
+ 
+ 
+ =================================================
+          Summary of function requirements        
+ =================================================
+ 
+ >> Number of Function evals needed :          10
+ 
+ >> Initial Sample Points by Latin Hypercube
+ >> Including center of the domain
+ >> Training points are written to file :samp/sampdim02ord03Fmirdyn                                  
+ 
+ =================================================
+         Matrix Setup & Pseudo-Inverse            
+ =================================================
+ 
+  >> Number of columns in the matrix (nterms):          10
+  >> Number of rows    in the matrix  (numpc):          10
+     >> Solver : LU Decomposition
+     >> Finding Pseudo-Inverse of the matrix . . . 
+ 
+ =================================================
+                 RHS Setup                        
+ =================================================
+ 
+ >> Cost Function Number :          22
+     >> Setting up the RHS with Function evals . . .
+     >> Number of RHS entries :          10
+ 
+           1  4.076778989442641E-003
+           2  4.015670857060257E-003
+           3  4.532107183575966E-003
+           4  3.938023067437865E-003
+           5  4.036913619328802E-003
+           6  4.067360358483312E-003
+           7  3.834837835513991E-003
+           8  4.478299960131757E-003
+           9  3.879273248462147E-003
+          10  4.172410365697535E-003
+ 
+ =================================================
+             Solve Linear System                  
+ =================================================
+ 
+ >> Solving for the coefficients . . . 
+           1  0.708442656937896     
+           2  -9.57294418526461     
+           3  0.911852531818545     
+           4   1.76533606181982     
+           5  -2.12257091403256     
+           6 -0.949602099314742     
+           7  -4.06274986948066     
+           8  -1.26357372874174     
+           9   2.06575661487949     
+          10  0.538605596664474     
+ >> Coeffs are succesfully determined . . .
+ >> Number of coefficients :           10
+ 
+ 
+ =================================================
+             MONTE-CARLO on Surrogate             
+ =================================================
+ 
+ 
+      >> # of Monte-Carlo Samples =    50000
+      >> Writing        50000  Monte-Carlo samples to MCSampCFD00.dat
+           >> [         1     50000 ] for Processor  0
+ 
+      >> Fct,  Function index:  22   0
+ 
+      >> xavg     0.25551E-01    0.60271E+00
+      >> xstd     0.17453E-02    0.10000E-01
+ 
+      >> Mean, Var, SD  =     0.40866E-02    0.23825E-07    0.15435E-03
+ 
+      >> Meanprime =     0.64165E-01    0.10623E-01
+      >> Varprime =     0.11826E-05    0.44834E-06
+ 
+      >> Meandbleprime = 
+            0.13847E+01    0.30294E+00
+            0.30294E+00    0.15408E+00
+      >> Vardbleprime = 
+            0.15220E-04    0.37758E-04
+            0.13134E-04    0.13822E-04
+ 
+      >> Range of X(min) =    0.018   0.561
+      >> Range of X(max) =    0.033   0.644
+      >> Ymax/min =     0.48646E-02    0.35564E-02
+      >> Output Histogram  [    0.35564E-02 :    0.48646E-02 ]
+ 
+ 
+ >> Program call is successful
+ 
+ 
+ =======================================================
+ Non-Intrusive Polynomial Chaos (Stochastic Collocation)
+ =======================================================
+ Author: Komahan Boopathy, University of Dayton, OH
+ Email : komahan.cool@gmail.com
+ =======================================================
+ 
+ 
+ =================================================
+          Summary of function requirements        
+ =================================================
+ 
+ >> Number of Function evals needed :          10
+ 
+ >> Initial Sample Points by Latin Hypercube
+ >> Including center of the domain
+ >> Training points are written to file :samp/sampdim02ord03Fmirdyn                                  
+ 
+ =================================================
+         Matrix Setup & Pseudo-Inverse            
+ =================================================
+ 
+  >> Number of columns in the matrix (nterms):          10
+  >> Number of rows    in the matrix  (numpc):          10
+     >> Solver : LU Decomposition
+     >> Finding Pseudo-Inverse of the matrix . . . 
+ 
+ =================================================
+                 RHS Setup                        
+ =================================================
+ 
+ >> Cost Function Number :          22
+     >> Setting up the RHS with Function evals . . .
+     >> Number of RHS entries :          10
+ 
+           1  0.601564977463783     
+           2  0.570715392936265     
+           3  0.606989089060091     
+           4  0.630581373304737     
+           5  0.571049162712666     
+           6  0.663891792811202     
+           7  0.575906698642845     
+           8  0.595475274189248     
+           9  0.639113295620348     
+          10  0.583379839306280     
+ 
+ =================================================
+             Solve Linear System                  
+ =================================================
+ 
+ >> Solving for the coefficients . . . 
+           1  -584.401313233386     
+           2   5928.28617992764     
+           3   748.363346271461     
+           4  -542.822503426235     
+           5  -201.472300809781     
+           6  -36.8846213541805     
+           7   1899.18960140870     
+           8   663.904012659863     
+           9   152.065539688808     
+          10   20.4303873078613     
+ >> Coeffs are succesfully determined . . .
+ >> Number of coefficients :           10
+ 
+ 
+ =================================================
+             MONTE-CARLO on Surrogate             
+ =================================================
+ 
+ 
+      >> # of Monte-Carlo Samples =    50000
+      >> Writing        50000  Monte-Carlo samples to MCSampCFD04.dat
+           >> [         1     50000 ] for Processor  0
+ 
+      >> Fct,  Function index:  22   4
+ 
+      >> xavg     0.25640E-01    0.60270E+00
+      >> xstd     0.17453E-02    0.10000E-01
+ 
+      >> Mean, Var, SD  =     0.60197E+00    0.33386E-03    0.18272E-01
+ 
+      >> Meanprime =     0.89231E+01    0.94996E+00
+      >> Varprime =     0.34446E-02    0.23867E-02
+ 
+      >> Meandbleprime = 
+            0.67921E+01    0.15872E+02
+            0.15872E+02    0.79089E+01
+      >> Vardbleprime = 
+            0.92740E+00    0.18431E+00
+            0.14454E+00    0.54219E-01
+ 
+      >> Range of X(min) =    0.018   0.560
+      >> Range of X(max) =    0.033   0.645
+      >> Ymax/min =     0.68926E+00    0.52625E+00
+      >> Output Histogram  [    0.52625E+00 :    0.68926E+00 ]
+ 
+ 
+ >> Program call is successful
+ 
+ 
+ =======================================================
+ Non-Intrusive Polynomial Chaos (Stochastic Collocation)
+ =======================================================
+ Author: Komahan Boopathy, University of Dayton, OH
+ Email : komahan.cool@gmail.com
+ =======================================================
+ 
+ 
+ =================================================
+          Summary of function requirements        
+ =================================================
+ 
+ >> Number of Function evals needed :          10
+ 
+ >> Initial Sample Points by Latin Hypercube
+ >> Including center of the domain
+ >> Training points are written to file :samp/sampdim02ord03Fmirdyn                                  
+ 
+ =================================================
+         Matrix Setup & Pseudo-Inverse            
+ =================================================
+ 
+  >> Number of columns in the matrix (nterms):          10
+  >> Number of rows    in the matrix  (numpc):          10
+     >> Solver : LU Decomposition
+     >> Finding Pseudo-Inverse of the matrix . . . 
+ 
+ =================================================
+                 RHS Setup                        
+ =================================================
+ 
+ >> Cost Function Number :          22
+     >> Setting up the RHS with Function evals . . .
+     >> Number of RHS entries :          10
+ 
+           1  4.082955692149346E-003
+           2  3.987830041831831E-003
+           3  4.665779241995122E-003
+           4  3.842350235296765E-003
+           5  4.326272846553121E-003
+           6  3.863451036377169E-003
+           7  4.226995426837826E-003
+           8  3.914271564306267E-003
+           9  4.255883289771037E-003
+          10  3.956548327145746E-003
+ 
+ =================================================
+             Solve Linear System                  
+ =================================================
+ 
+ >> Solving for the coefficients . . . 
+           1  -7.26619128744924     
+           2   50.2271258703500     
+           3   11.6201128691820     
+           4  -6.22688314451136     
+           5  -3.25445304736318     
+           6 -0.926794040794241     
+           7   15.5290829329923     
+           8   9.50372891987198     
+           9   2.54332326262147     
+          10  0.518344078002807     
+ >> Coeffs are succesfully determined . . .
+ >> Number of coefficients :           10
+ 
+ 
+ =================================================
+             MONTE-CARLO on Surrogate             
+ =================================================
+ 
+ 
+      >> # of Monte-Carlo Samples =    50000
+      >> Writing        50000  Monte-Carlo samples to MCSampCFD00.dat
+           >> [         1     50000 ] for Processor  0
+ 
+      >> Fct,  Function index:  22   0
+ 
+      >> xavg     0.25640E-01    0.60270E+00
+      >> xstd     0.17453E-02    0.10000E-01
+ 
+      >> Mean, Var, SD  =     0.40926E-02    0.24068E-07    0.15514E-03
+ 
+      >> Meanprime =     0.64384E-01    0.10648E-01
+      >> Varprime =     0.11910E-05    0.44394E-06
+ 
+      >> Meandbleprime = 
+            0.13910E+01    0.29861E+00
+            0.29861E+00    0.15127E+00
+      >> Vardbleprime = 
+            0.10699E-03    0.48357E-04
+            0.23480E-04    0.13827E-04
+ 
+      >> Range of X(min) =    0.018   0.561
+      >> Range of X(max) =    0.034   0.646
+      >> Ymax/min =     0.49220E-02    0.35287E-02
+      >> Output Histogram  [    0.35287E-02 :    0.49220E-02 ]
+ 
+ 
+ >> Program call is successful
+ 
+ 
+ =======================================================
+ Non-Intrusive Polynomial Chaos (Stochastic Collocation)
+ =======================================================
+ Author: Komahan Boopathy, University of Dayton, OH
+ Email : komahan.cool@gmail.com
+ =======================================================
+ 
+ 
+ =================================================
+          Summary of function requirements        
+ =================================================
+ 
+ >> Number of Function evals needed :          10
+ 
+ >> Initial Sample Points by Latin Hypercube
+ >> Including center of the domain
+ >> Training points are written to file :samp/sampdim02ord03Fmirdyn                                  
+ 
+ =================================================
+         Matrix Setup & Pseudo-Inverse            
+ =================================================
+ 
+  >> Number of columns in the matrix (nterms):          10
+  >> Number of rows    in the matrix  (numpc):          10
+     >> Solver : LU Decomposition
+     >> Finding Pseudo-Inverse of the matrix . . . 
+ 
+ =================================================
+                 RHS Setup                        
+ =================================================
+ 
+ >> Cost Function Number :          22
+     >> Setting up the RHS with Function evals . . .
+     >> Number of RHS entries :          10
+ 
+           1  0.599797205955532     
+           2  0.591642026678513     
+           3  0.569812445876966     
+           4  0.602629754880185     
+           5  0.598604253700954     
+           6  0.610038699738313     
+           7  0.639565253217206     
+           8  0.592942492561169     
+           9  0.574293052389682     
+          10  0.599644278835993     
+ 
+ =================================================
+             Solve Linear System                  
+ =================================================
+ 
+ >> Solving for the coefficients . . . 
+           1   747.842434787797     
+           2  -4160.71034769941     
+           3  -1070.80167907156     
+           4   762.468165593536     
+           5   206.019606481255     
+           6  -14.7420401531851     
+           7  -1322.54384955388     
+           8  -1110.95513108443     
+           9  -118.807412362793     
+          10   11.6696774948857     
+ >> Coeffs are succesfully determined . . .
+ >> Number of coefficients :           10
+ 
+ 
+ =================================================
+             MONTE-CARLO on Surrogate             
+ =================================================
+ 
+ 
+      >> # of Monte-Carlo Samples =    50000
+      >> Writing        50000  Monte-Carlo samples to MCSampCFD04.dat
+           >> [         1     50000 ] for Processor  0
+ 
+      >> Fct,  Function index:  22   4
+ 
+      >> xavg     0.22653E-01    0.60071E+00
+      >> xstd     0.17453E-02    0.10000E-01
+ 
+      >> Mean, Var, SD  =     0.60017E+00    0.32777E-03    0.18104E-01
+ 
+      >> Meanprime =     0.88634E+01    0.92966E+00
+      >> Varprime =     0.29529E-02    0.20553E-02
+ 
+      >> Meandbleprime = 
+            0.10453E+02    0.12948E+02
+            0.12948E+02    0.71936E+01
+      >> Vardbleprime = 
+           -0.80875E+00   -0.12671E+00
+           -0.15347E+00    0.11797E-01
+ 
+      >> Range of X(min) =    0.015   0.559
+      >> Range of X(max) =    0.030   0.642
+      >> Ymax/min =     0.68097E+00    0.52639E+00
+      >> Output Histogram  [    0.52639E+00 :    0.68097E+00 ]
+ 
+ 
+ >> Program call is successful
+ 
+ 
+ =======================================================
+ Non-Intrusive Polynomial Chaos (Stochastic Collocation)
+ =======================================================
+ Author: Komahan Boopathy, University of Dayton, OH
+ Email : komahan.cool@gmail.com
+ =======================================================
+ 
+ 
+ =================================================
+          Summary of function requirements        
+ =================================================
+ 
+ >> Number of Function evals needed :          10
+ 
+ >> Initial Sample Points by Latin Hypercube
+ >> Including center of the domain
+ >> Training points are written to file :samp/sampdim02ord03Fmirdyn                                  
+ 
+ =================================================
+         Matrix Setup & Pseudo-Inverse            
+ =================================================
+ 
+  >> Number of columns in the matrix (nterms):          10
+  >> Number of rows    in the matrix  (numpc):          10
+     >> Solver : LU Decomposition
+     >> Finding Pseudo-Inverse of the matrix . . . 
+ 
+ =================================================
+                 RHS Setup                        
+ =================================================
+ 
+ >> Cost Function Number :          22
+     >> Setting up the RHS with Function evals . . .
+     >> Number of RHS entries :          10
+ 
+           1  4.061785562512572E-003
+           2  3.706999041674656E-003
+           3  4.095665640248919E-003
+           4  4.092451104094052E-003
+           5  4.400270127528319E-003
+           6  3.999128002444657E-003
+           7  4.162080278594184E-003
+           8  4.158487950399278E-003
+           9  3.909571750017793E-003
+          10  4.144905257630151E-003
+ 
+ =================================================
+             Solve Linear System                  
+ =================================================
+ 
+ >> Solving for the coefficients . . . 
+           1  -4.80025936393815     
+           2  -19.3329521245054     
+           3   10.4241013251941     
+           4  -3.71315318100369     
+           5  -3.68199909676500     
+           6 -0.969462794413422     
+           7  -7.82281553986340     
+           8   8.21605570802120     
+           9   2.98081157273052     
+          10  0.539821274479638     
+ >> Coeffs are succesfully determined . . .
+ >> Number of coefficients :           10
+ 
+ 
+ =================================================
+             MONTE-CARLO on Surrogate             
+ =================================================
+ 
+ 
+      >> # of Monte-Carlo Samples =    50000
+      >> Writing        50000  Monte-Carlo samples to MCSampCFD00.dat
+           >> [         1     50000 ] for Processor  0
+ 
+      >> Fct,  Function index:  22   0
+ 
+      >> xavg     0.22653E-01    0.60071E+00
+      >> xstd     0.17453E-02    0.10000E-01
+ 
+      >> Mean, Var, SD  =     0.40710E-02    0.22462E-07    0.14987E-03
+ 
+      >> Meanprime =     0.62063E-01    0.10357E-01
+      >> Varprime =     0.10889E-05    0.39982E-06
+ 
+      >> Meandbleprime = 
+            0.13813E+01    0.27145E+00
+            0.27145E+00    0.14178E+00
+      >> Vardbleprime = 
+            0.42919E-04    0.45197E-04
+            0.23028E-04    0.13490E-04
+ 
+      >> Range of X(min) =    0.015   0.556
+      >> Range of X(max) =    0.030   0.643
+      >> Ymax/min =     0.48677E-02    0.34696E-02
+      >> Output Histogram  [    0.34696E-02 :    0.48677E-02 ]
+ 
+ 
+ >> Program call is successful
+ 
+ 
+ =======================================================
+ Non-Intrusive Polynomial Chaos (Stochastic Collocation)
+ =======================================================
+ Author: Komahan Boopathy, University of Dayton, OH
+ Email : komahan.cool@gmail.com
+ =======================================================
+ 
+ 
+ =================================================
+          Summary of function requirements        
+ =================================================
+ 
+ >> Number of Function evals needed :          10
+ 
+ >> Initial Sample Points by Latin Hypercube
+ >> Including center of the domain
+ >> Training points are written to file :samp/sampdim02ord03Fmirdyn                                  
+ 
+ =================================================
+         Matrix Setup & Pseudo-Inverse            
+ =================================================
+ 
+  >> Number of columns in the matrix (nterms):          10
+  >> Number of rows    in the matrix  (numpc):          10
+     >> Solver : LU Decomposition
+     >> Finding Pseudo-Inverse of the matrix . . . 
+ 
+ =================================================
+                 RHS Setup                        
+ =================================================
+ 
+ >> Cost Function Number :          22
+     >> Setting up the RHS with Function evals . . .
+     >> Number of RHS entries :          10
+ 
+           1  0.600186567139877     
+           2  0.554459621986459     
+           3  0.604426295310823     
+           4  0.662158338003165     
+           5  0.611857147503832     
+           6  0.628431607523745     
+           7  0.583720087550364     
+           8  0.558931533691715     
+           9  0.601286789847850     
+          10  0.602365032115522     
+ 
+ =================================================
+             Solve Linear System                  
+ =================================================
+ 
+ >> Solving for the coefficients . . . 
+           1  -77.3263290554309     
+           2   811.792612466245     
+           3   130.456691619982     
+           4  -30.1142977691221     
+           5  -95.0322228725561     
+           6  -42.5630145011244     
+           7   229.316787217969     
+           8   31.5008369302026     
+           9   90.3238214812306     
+          10   24.6235953104510     
+ >> Coeffs are succesfully determined . . .
+ >> Number of coefficients :           10
+ 
+ 
+ =================================================
+             MONTE-CARLO on Surrogate             
+ =================================================
+ 
+ 
+      >> # of Monte-Carlo Samples =    50000
+      >> Writing        50000  Monte-Carlo samples to MCSampCFD04.dat
+           >> [         1     50000 ] for Processor  0
+ 
+      >> Fct,  Function index:  22   4
+ 
+      >> xavg     0.22692E-01    0.60071E+00
+      >> xstd     0.17453E-02    0.10000E-01
+ 
+      >> Mean, Var, SD  =     0.60059E+00    0.32858E-03    0.18127E-01
+ 
+      >> Meanprime =     0.88827E+01    0.93520E+00
+      >> Varprime =     0.32896E-02    0.22695E-02
+ 
+      >> Meandbleprime = 
+            0.88396E+01    0.14915E+02
+            0.14915E+02    0.77236E+01
+      >> Vardbleprime = 
+            0.13166E+00    0.82595E-01
+            0.50805E-01    0.51010E-01
+ 
+      >> Range of X(min) =    0.014   0.558
+      >> Range of X(max) =    0.030   0.643
+      >> Ymax/min =     0.67397E+00    0.52191E+00
+      >> Output Histogram  [    0.52191E+00 :    0.67397E+00 ]
+ 
+ 
+ >> Program call is successful
+ 
+ 
+ =======================================================
+ Non-Intrusive Polynomial Chaos (Stochastic Collocation)
+ =======================================================
+ Author: Komahan Boopathy, University of Dayton, OH
+ Email : komahan.cool@gmail.com
+ =======================================================
+ 
+ 
+ =================================================
+          Summary of function requirements        
+ =================================================
+ 
+ >> Number of Function evals needed :          10
+ 
+ >> Initial Sample Points by Latin Hypercube
+ >> Including center of the domain
+ >> Training points are written to file :samp/sampdim02ord03Fmirdyn                                  
+ 
+ =================================================
+         Matrix Setup & Pseudo-Inverse            
+ =================================================
+ 
+  >> Number of columns in the matrix (nterms):          10
+  >> Number of rows    in the matrix  (numpc):          10
+     >> Solver : LU Decomposition
+     >> Finding Pseudo-Inverse of the matrix . . . 
+ 
+ =================================================
+                 RHS Setup                        
+ =================================================
+ 
+ >> Cost Function Number :          22
+     >> Setting up the RHS with Function evals . . .
+     >> Number of RHS entries :          10
+ 
+           1  4.064564737835322E-003
+           2  4.019555224847404E-003
+           3  4.147546585118172E-003
+           4  3.817208369093961E-003
+           5  4.431471025879631E-003
+           6  3.818412927157610E-003
+           7  3.998129766278974E-003
+           8  4.088741267243798E-003
+           9  4.124807984952933E-003
+          10  4.202202255570887E-003
+ 
+ =================================================
+             Solve Linear System                  
+ =================================================
+ 
+ >> Solving for the coefficients . . . 
+           1  -4.70948477127125     
+           2   13.2891080749710     
+           3   8.99233516529426     
+           4  -3.86320945034357     
+           5  -2.77166697508257     
+           6 -0.758250711870040     
+           7   3.38019107667202     
+           8   7.24606988055488     
+           9   2.26709177454224     
+          10  0.431679921748319     
+ >> Coeffs are succesfully determined . . .
+ >> Number of coefficients :           10
+ 
+ 
+ =================================================
+             MONTE-CARLO on Surrogate             
+ =================================================
+ 
+ 
+      >> # of Monte-Carlo Samples =    50000
+      >> Writing        50000  Monte-Carlo samples to MCSampCFD00.dat
+           >> [         1     50000 ] for Processor  0
+ 
+      >> Fct,  Function index:  22   0
+ 
+      >> xavg     0.22692E-01    0.60071E+00
+      >> xstd     0.17453E-02    0.10000E-01
+ 
+      >> Mean, Var, SD  =     0.40738E-02    0.22573E-07    0.15024E-03
+ 
+      >> Meanprime =     0.62259E-01    0.10361E-01
+      >> Varprime =     0.11323E-05    0.40425E-06
+ 
+      >> Meandbleprime = 
+            0.14394E+01    0.28094E+00
+            0.28094E+00    0.14228E+00
+      >> Vardbleprime = 
+            0.66141E-04    0.43440E-04
+            0.19413E-04    0.11649E-04
+ 
+      >> Range of X(min) =    0.014   0.557
+      >> Range of X(max) =    0.030   0.643
+      >> Ymax/min =     0.48357E-02    0.35418E-02
+      >> Output Histogram  [    0.35418E-02 :    0.48357E-02 ]
+ 
+ 
+ >> Program call is successful
+ 
+ 
+ =======================================================
+ Non-Intrusive Polynomial Chaos (Stochastic Collocation)
+ =======================================================
+ Author: Komahan Boopathy, University of Dayton, OH
+ Email : komahan.cool@gmail.com
+ =======================================================
+ 
+ 
+ =================================================
+          Summary of function requirements        
+ =================================================
+ 
+ >> Number of Function evals needed :          10
+ 
+ >> Initial Sample Points by Latin Hypercube
+ >> Including center of the domain
+ >> Training points are written to file :samp/sampdim02ord03Fmirdyn                                  
+ 
+ =================================================
+         Matrix Setup & Pseudo-Inverse            
+ =================================================
+ 
+  >> Number of columns in the matrix (nterms):          10
+  >> Number of rows    in the matrix  (numpc):          10
+     >> Solver : LU Decomposition
+     >> Finding Pseudo-Inverse of the matrix . . . 
+ 
+ =================================================
+                 RHS Setup                        
+ =================================================
+ 
+ >> Cost Function Number :          22
+     >> Setting up the RHS with Function evals . . .
+     >> Number of RHS entries :          10
+ 
+           1  0.600171315381764     
+           2  0.580267133716466     
+           3  0.590141519200510     
+           4  0.568381854384220     
+           5  0.600687005666927     
+           6  0.634541427363584     
+           7  0.635027436066711     
+           8  0.612824406134613     
+           9  0.645263094911026     
+          10  0.556495589083025     
+ 
+ =================================================
+             Solve Linear System                  
+ =================================================
+ 
+ >> Solving for the coefficients . . . 
+           1   192.638587834054     
+           2  -10019.6029881616     
+           3   86.5250650545435     
+           4   242.980698703044     
+           5   7.87521381922913     
+           6  -45.8287614565150     
+           7  -3340.98720139819     
+           8  -21.8584743766520     
+           9   6.90697755586185     
+          10   27.5134766813715     
+ >> Coeffs are succesfully determined . . .
+ >> Number of coefficients :           10
+ 
+ 
+ =================================================
+             MONTE-CARLO on Surrogate             
+ =================================================
+ 
+ 
+      >> # of Monte-Carlo Samples =    50000
+      >> Writing        50000  Monte-Carlo samples to MCSampCFD04.dat
+           >> [         1     50000 ] for Processor  0
+ 
+      >> Fct,  Function index:  22   4
+ 
+      >> xavg     0.22691E-01    0.60071E+00
+      >> xstd     0.17453E-02    0.10000E-01
+ 
+      >> Mean, Var, SD  =     0.60057E+00    0.32816E-03    0.18115E-01
+ 
+      >> Meanprime =     0.89154E+01    0.93238E+00
+      >> Varprime =     0.30725E-02    0.22822E-02
+ 
+      >> Meandbleprime = 
+            0.48431E+01    0.15181E+02
+            0.15181E+02    0.78221E+01
+      >> Vardbleprime = 
+           -0.10442E+01    0.50108E-01
+            0.14063E-01    0.45192E-01
+ 
+      >> Range of X(min) =    0.015   0.558
+      >> Range of X(max) =    0.030   0.643
+      >> Ymax/min =     0.68629E+00    0.52162E+00
+      >> Output Histogram  [    0.52162E+00 :    0.68629E+00 ]
+ 
+ 
+ >> Program call is successful
+ 
+ 
+ =======================================================
+ Non-Intrusive Polynomial Chaos (Stochastic Collocation)
+ =======================================================
+ Author: Komahan Boopathy, University of Dayton, OH
+ Email : komahan.cool@gmail.com
+ =======================================================
+ 
+ 
+ =================================================
+          Summary of function requirements        
+ =================================================
+ 
+ >> Number of Function evals needed :          10
+ 
+ >> Initial Sample Points by Latin Hypercube
+ >> Including center of the domain
+ >> Training points are written to file :samp/sampdim02ord03Fmirdyn                                  
+ 
+ =================================================
+         Matrix Setup & Pseudo-Inverse            
+ =================================================
+ 
+  >> Number of columns in the matrix (nterms):          10
+  >> Number of rows    in the matrix  (numpc):          10
+     >> Solver : LU Decomposition
+     >> Finding Pseudo-Inverse of the matrix . . . 
+ 
+ =================================================
+                 RHS Setup                        
+ =================================================
+ 
+ >> Cost Function Number :          22
+     >> Setting up the RHS with Function evals . . .
+     >> Number of RHS entries :          10
+ 
+           1  4.064455829651534E-003
+           2  4.261322283768772E-003
+           3  4.109364470287650E-003
+           4  3.748361028573936E-003
+           5  4.305831258786069E-003
+           6  4.320590430118855E-003
+           7  3.980958922474299E-003
+           8  3.616836849644787E-003
+           9  4.302973248918917E-003
+          10  4.312638265416698E-003
+ 
+ =================================================
+             Solve Linear System                  
+ =================================================
+ 
+ >> Solving for the coefficients . . . 
+           1   3.67063394672150     
+           2  -273.584122689074     
+           3   6.85593534555130     
+           4   5.43519766808468     
+           5  -7.38562969116507     
+           6  -1.55872107925286     
+           7  -93.9498438654472     
+           8   3.39910947269307     
+           9   6.19768798170914     
+          10  0.822475186136699     
+ >> Coeffs are succesfully determined . . .
+ >> Number of coefficients :           10
+ 
+ 
+ =================================================
+             MONTE-CARLO on Surrogate             
+ =================================================
+ 
+ 
+      >> # of Monte-Carlo Samples =    50000
+      >> Writing        50000  Monte-Carlo samples to MCSampCFD00.dat
+           >> [         1     50000 ] for Processor  0
+ 
+      >> Fct,  Function index:  22   0
+ 
+      >> xavg     0.22691E-01    0.60071E+00
+      >> xstd     0.17453E-02    0.10000E-01
+ 
+      >> Mean, Var, SD  =     0.40742E-02    0.22801E-07    0.15100E-03
+ 
+      >> Meanprime =     0.61518E-01    0.10478E-01
+      >> Varprime =     0.12769E-05    0.36017E-06
+ 
+      >> Meandbleprime = 
+            0.21634E+01    0.21469E+00
+            0.21469E+00    0.12825E+00
+      >> Vardbleprime = 
+           -0.15594E-03    0.71271E-04
+            0.32665E-04    0.19027E-04
+ 
+      >> Range of X(min) =    0.015   0.559
+      >> Range of X(max) =    0.030   0.643
+      >> Ymax/min =     0.48307E-02    0.34559E-02
+      >> Output Histogram  [    0.34559E-02 :    0.48307E-02 ]
+ 
+ 
+ >> Program call is successful
+ 
+ 
+ =======================================================
+ Non-Intrusive Polynomial Chaos (Stochastic Collocation)
+ =======================================================
+ Author: Komahan Boopathy, University of Dayton, OH
+ Email : komahan.cool@gmail.com
+ =======================================================
+ 
+ 
+ =================================================
+          Summary of function requirements        
+ =================================================
+ 
+ >> Number of Function evals needed :          10
+ 
+ >> Initial Sample Points by Latin Hypercube
+ >> Including center of the domain
+ >> Training points are written to file :samp/sampdim02ord03Fmirdyn                                  
+ 
+ =================================================
+         Matrix Setup & Pseudo-Inverse            
+ =================================================
+ 
+  >> Number of columns in the matrix (nterms):          10
+  >> Number of rows    in the matrix  (numpc):          10
+     >> Solver : LU Decomposition
+     >> Finding Pseudo-Inverse of the matrix . . . 
+ 
+ =================================================
+                 RHS Setup                        
+ =================================================
+ 
+ >> Cost Function Number :          22
+     >> Setting up the RHS with Function evals . . .
+     >> Number of RHS entries :          10
+ 
+           1  0.600677415110883     
+           2  0.645747323281417     
+           3  0.627757711960409     
+           4  0.585168272269894     
+           5  0.574168718825607     
+           6  0.617943237377354     
+           7  0.573056254148263     
+           8  0.588086620157544     
+           9  0.587532318039364     
+          10  0.613027044428440     
+ 
+ =================================================
+             Solve Linear System                  
+ =================================================
+ 
+ >> Solving for the coefficients . . . 
+           1  -14.4511455504703     
+           2  -938.131592093543     
+           3   90.4826334867155     
+           4   23.2102329445969     
+           5  -90.0326693176484     
+           6  -34.0548942369221     
+           7  -352.060697205259     
+           8   10.8581753262487     
+           9   87.4659134727542     
+          10   19.8965641412590     
+ >> Coeffs are succesfully determined . . .
+ >> Number of coefficients :           10
+ 
+ 
+ =================================================
+             MONTE-CARLO on Surrogate             
+ =================================================
+ 
+ 
+      >> # of Monte-Carlo Samples =    50000
+      >> Writing        50000  Monte-Carlo samples to MCSampCFD04.dat
+           >> [         1     50000 ] for Processor  0
+ 
+      >> Fct,  Function index:  22   4
+ 
+      >> xavg     0.24147E-01    0.60170E+00
+      >> xstd     0.17453E-02    0.10000E-01
+ 
+      >> Mean, Var, SD  =     0.60109E+00    0.33121E-03    0.18199E-01
+ 
+      >> Meanprime =     0.89045E+01    0.94331E+00
+      >> Varprime =     0.34515E-02    0.23691E-02
+ 
+      >> Meandbleprime = 
+            0.84808E+01    0.15749E+02
+            0.15749E+02    0.79453E+01
+      >> Vardbleprime = 
+           -0.60151E-01    0.84615E-01
+            0.48526E-01    0.46355E-01
+ 
+      >> Range of X(min) =    0.017   0.560
+      >> Range of X(max) =    0.033   0.645
+      >> Ymax/min =     0.69963E+00    0.52640E+00
+      >> Output Histogram  [    0.52640E+00 :    0.69963E+00 ]
+ 
+ 
+ >> Program call is successful
+ 
+ 
+ =======================================================
+ Non-Intrusive Polynomial Chaos (Stochastic Collocation)
+ =======================================================
+ Author: Komahan Boopathy, University of Dayton, OH
+ Email : komahan.cool@gmail.com
+ =======================================================
+ 
+ 
+ =================================================
+          Summary of function requirements        
+ =================================================
+ 
+ >> Number of Function evals needed :          10
+ 
+ >> Initial Sample Points by Latin Hypercube
+ >> Including center of the domain
+ >> Training points are written to file :samp/sampdim02ord03Fmirdyn                                  
+ 
+ =================================================
+         Matrix Setup & Pseudo-Inverse            
+ =================================================
+ 
+  >> Number of columns in the matrix (nterms):          10
+  >> Number of rows    in the matrix  (numpc):          10
+     >> Solver : LU Decomposition
+     >> Finding Pseudo-Inverse of the matrix . . . 
+ 
+ =================================================
+                 RHS Setup                        
+ =================================================
+ 
+ >> Cost Function Number :          22
+     >> Setting up the RHS with Function evals . . .
+     >> Number of RHS entries :          10
+ 
+           1  4.071262934668316E-003
+           2  3.827544215352521E-003
+           3  4.439968156850957E-003
+           4  3.832355871972070E-003
+           5  4.231663465672570E-003
+           6  3.742590471504293E-003
+           7  4.025333357321146E-003
+           8  4.691089172695823E-003
+           9  4.551357465118130E-003
+          10  3.772056451228028E-003
+ 
+ =================================================
+             Solve Linear System                  
+ =================================================
+ 
+ >> Solving for the coefficients . . . 
+           1  -1.60848139744341     
+           2   47.4903692905342     
+           3   2.69408889429329     
+           4 -0.228797265999999     
+           5  -4.30327968992077     
+           6  -1.22798752427695     
+           7   14.1444732280083     
+           8 -7.308730504550004E-002
+           9   3.78753354882123     
+          10  0.671559512458177     
+ >> Coeffs are succesfully determined . . .
+ >> Number of coefficients :           10
+ 
+ 
+ =================================================
+             MONTE-CARLO on Surrogate             
+ =================================================
+ 
+ 
+      >> # of Monte-Carlo Samples =    50000
+      >> Writing        50000  Monte-Carlo samples to MCSampCFD00.dat
+           >> [         1     50000 ] for Processor  0
+ 
+      >> Fct,  Function index:  22   0
+ 
+      >> xavg     0.24147E-01    0.60170E+00
+      >> xstd     0.17453E-02    0.10000E-01
+ 
+      >> Mean, Var, SD  =     0.40811E-02    0.23177E-07    0.15224E-03
+ 
+      >> Meanprime =     0.63459E-01    0.10445E-01
+      >> Varprime =     0.11113E-05    0.41793E-06
+ 
+      >> Meandbleprime = 
+            0.15037E+01    0.25114E+00
+            0.25114E+00    0.15142E+00
+      >> Vardbleprime = 
+            0.59154E-04    0.42506E-04
+            0.20805E-04    0.16417E-04
+ 
+      >> Range of X(min) =    0.017   0.559
+      >> Range of X(max) =    0.031   0.644
+      >> Ymax/min =     0.47961E-02    0.35694E-02
+      >> Output Histogram  [    0.35694E-02 :    0.47961E-02 ]
+ 
+ 
+ >> Program call is successful
+ 
+ 
+ =======================================================
+ Non-Intrusive Polynomial Chaos (Stochastic Collocation)
+ =======================================================
+ Author: Komahan Boopathy, University of Dayton, OH
+ Email : komahan.cool@gmail.com
+ =======================================================
+ 
+ 
+ =================================================
+          Summary of function requirements        
+ =================================================
+ 
+ >> Number of Function evals needed :          10
+ 
+ >> Initial Sample Points by Latin Hypercube
+ >> Including center of the domain
+ >> Training points are written to file :samp/sampdim02ord03Fmirdyn                                  
+ 
+ =================================================
+         Matrix Setup & Pseudo-Inverse            
+ =================================================
+ 
+  >> Number of columns in the matrix (nterms):          10
+  >> Number of rows    in the matrix  (numpc):          10
+     >> Solver : LU Decomposition
+     >> Finding Pseudo-Inverse of the matrix . . . 
+ 
+ =================================================
+                 RHS Setup                        
+ =================================================
+ 
+ >> Cost Function Number :          22
+     >> Setting up the RHS with Function evals . . .
+     >> Number of RHS entries :          10
+ 
+           1  0.599260020944200     
+           2  0.640741475823835     
+           3  0.633697756695748     
+           4  0.578225003441268     
+           5  0.607922630514798     
+           6  0.571745010166721     
+           7  0.591019982867971     
+           8  0.550391138481566     
+           9  0.608497553082794     
+          10  0.621535656190238     
+ 
+ =================================================
+             Solve Linear System                  
+ =================================================
+ 
+ >> Solving for the coefficients . . . 
+           1  -240.805497191196     
+           2  -723.708617749361     
+           3   447.416968103325     
+           4  -223.787643101656     
+           5  -187.583761604926     
+           6  -15.2899351503069     
+           7  -314.560970108467     
+           8   411.281770586012     
+           9   154.890094179959     
+          10   8.85650335374710     
+ >> Coeffs are succesfully determined . . .
+ >> Number of coefficients :           10
+ 
+ 
+ =================================================
+             MONTE-CARLO on Surrogate             
+ =================================================
+ 
+ 
+      >> # of Monte-Carlo Samples =    50000
+      >> Writing        50000  Monte-Carlo samples to MCSampCFD04.dat
+           >> [         1     50000 ] for Processor  0
+ 
+      >> Fct,  Function index:  22   4
+ 
+      >> xavg     0.20743E-01    0.60001E+00
+      >> xstd     0.17453E-02    0.10000E-01
+ 
+      >> Mean, Var, SD  =     0.59966E+00    0.32603E-03    0.18056E-01
+ 
+      >> Meanprime =     0.88545E+01    0.92816E+00
+      >> Varprime =     0.32546E-02    0.22751E-02
+ 
+      >> Meandbleprime = 
+            0.68212E+01    0.15350E+02
+            0.15350E+02    0.77298E+01
+      >> Vardbleprime = 
+            0.10025E+00    0.15101E+00
+            0.11570E+00    0.40130E-01
+ 
+      >> Range of X(min) =    0.013   0.556
+      >> Range of X(max) =    0.028   0.643
+      >> Ymax/min =     0.67502E+00    0.50844E+00
+      >> Output Histogram  [    0.50844E+00 :    0.67502E+00 ]
+ 
+ 
+ >> Program call is successful
+ 
+ 
+ =======================================================
+ Non-Intrusive Polynomial Chaos (Stochastic Collocation)
+ =======================================================
+ Author: Komahan Boopathy, University of Dayton, OH
+ Email : komahan.cool@gmail.com
+ =======================================================
+ 
+ 
+ =================================================
+          Summary of function requirements        
+ =================================================
+ 
+ >> Number of Function evals needed :          10
+ 
+ >> Initial Sample Points by Latin Hypercube
+ >> Including center of the domain
+ >> Training points are written to file :samp/sampdim02ord03Fmirdyn                                  
+ 
+ =================================================
+         Matrix Setup & Pseudo-Inverse            
+ =================================================
+ 
+  >> Number of columns in the matrix (nterms):          10
+  >> Number of rows    in the matrix  (numpc):          10
+     >> Solver : LU Decomposition
+     >> Finding Pseudo-Inverse of the matrix . . . 
+ 
+ =================================================
+                 RHS Setup                        
+ =================================================
+ 
+ >> Cost Function Number :          22
+     >> Setting up the RHS with Function evals . . .
+     >> Number of RHS entries :          10
+ 
+           1  4.054817936194241E-003
+           2  3.694256280396810E-003
+           3  4.072534085333668E-003
+           4  3.868311804756087E-003
+           5  4.614058902386863E-003
+           6  4.413243789746655E-003
+           7  3.810008605625485E-003
+           8  4.193231919183902E-003
+           9  4.184807983689932E-003
+          10  3.989032026695474E-003
+ 
+ =================================================
+             Solve Linear System                  
+ =================================================
+ 
+ >> Solving for the coefficients . . . 
+           1  -10.0012519738640     
+           2   120.539210148052     
+           3   13.9217775879539     
+           4  -10.4840661011283     
+           5  -4.36374321377875     
+           6  0.435402661753542     
+           7   38.5772131405173     
+           8   14.8984818063977     
+           9   3.30468337868385     
+          10 -0.242865856813483     
+ >> Coeffs are succesfully determined . . .
+ >> Number of coefficients :           10
+ 
+ 
+ =================================================
+             MONTE-CARLO on Surrogate             
+ =================================================
+ 
+ 
+      >> # of Monte-Carlo Samples =    50000
+      >> Writing        50000  Monte-Carlo samples to MCSampCFD00.dat
+           >> [         1     50000 ] for Processor  0
+ 
+      >> Fct,  Function index:  22   0
+ 
+      >> xavg     0.20743E-01    0.60001E+00
+      >> xstd     0.17453E-02    0.10000E-01
+ 
+      >> Mean, Var, SD  =     0.40641E-02    0.21682E-07    0.14725E-03
+ 
+      >> Meanprime =     0.60712E-01    0.10207E-01
+      >> Varprime =     0.10928E-05    0.35210E-06
+ 
+      >> Meandbleprime = 
+            0.17115E+01    0.22001E+00
+            0.22001E+00    0.13357E+00
+      >> Vardbleprime = 
+            0.17478E-03    0.53246E-04
+            0.28342E-04    0.33791E-05
+ 
+      >> Range of X(min) =    0.013   0.555
+      >> Range of X(max) =    0.028   0.642
+      >> Ymax/min =     0.47964E-02    0.35396E-02
+      >> Output Histogram  [    0.35396E-02 :    0.47964E-02 ]
+ 
+ 
+ >> Program call is successful
+ 
+ 
+ =======================================================
+ Non-Intrusive Polynomial Chaos (Stochastic Collocation)
+ =======================================================
+ Author: Komahan Boopathy, University of Dayton, OH
+ Email : komahan.cool@gmail.com
+ =======================================================
+ 
+ 
+ =================================================
+          Summary of function requirements        
+ =================================================
+ 
+ >> Number of Function evals needed :          10
+ 
+ >> Initial Sample Points by Latin Hypercube
+ >> Including center of the domain
+ >> Training points are written to file :samp/sampdim02ord03Fmirdyn                                  
+ 
+ =================================================
+         Matrix Setup & Pseudo-Inverse            
+ =================================================
+ 
+  >> Number of columns in the matrix (nterms):          10
+  >> Number of rows    in the matrix  (numpc):          10
+     >> Solver : LU Decomposition
+     >> Finding Pseudo-Inverse of the matrix . . . 
+ 
+ =================================================
+                 RHS Setup                        
+ =================================================
+ 
+ >> Cost Function Number :          22
+     >> Setting up the RHS with Function evals . . .
+     >> Number of RHS entries :          10
+ 
+           1  0.599769990262438     
+           2  0.660522860985440     
+           3  0.633924778006925     
+           4  0.590285261898221     
+           5  0.553346007575794     
+           6  0.619753021216614     
+           7  0.601893513081700     
+           8  0.561434757021196     
+           9  0.634879061096314     
+          10  0.569404158284492     
+ 
+ =================================================
+             Solve Linear System                  
+ =================================================
+ 
+ >> Solving for the coefficients . . . 
+           1   140.965706419269     
+           2  -2891.44547290085     
+           3  -113.595760608580     
+           4   164.072994806172     
+           5  -107.143533949462     
+           6  -21.0769384471112     
+           7  -1010.75172991896     
+           8  -163.655344902009     
+           9   107.944482045641     
+          10   12.6212448989166     
+ >> Coeffs are succesfully determined . . .
+ >> Number of coefficients :           10
+ 
+ 
+ =================================================
+             MONTE-CARLO on Surrogate             
+ =================================================
+ 
+ 
+      >> # of Monte-Carlo Samples =    50000
+      >> Writing        50000  Monte-Carlo samples to MCSampCFD04.dat
+           >> [         1     50000 ] for Processor  0
+ 
+      >> Fct,  Function index:  22   4
+ 
+      >> xavg     0.20797E-01    0.60001E+00
+      >> xstd     0.17453E-02    0.10000E-01
+ 
+      >> Mean, Var, SD  =     0.60017E+00    0.32588E-03    0.18052E-01
+ 
+      >> Meanprime =     0.88696E+01    0.93267E+00
+      >> Varprime =     0.32059E-02    0.22881E-02
+ 
+      >> Meandbleprime = 
+            0.56353E+01    0.15585E+02
+            0.15585E+02    0.77731E+01
+      >> Vardbleprime = 
+           -0.33799E+00    0.72013E-01
+            0.35989E-01    0.39289E-01
+ 
+      >> Range of X(min) =    0.013   0.558
+      >> Range of X(max) =    0.028   0.642
+      >> Ymax/min =     0.68349E+00    0.53274E+00
+      >> Output Histogram  [    0.53274E+00 :    0.68349E+00 ]
+ 
+ 
+ >> Program call is successful
+ 
+ 
+ =======================================================
+ Non-Intrusive Polynomial Chaos (Stochastic Collocation)
+ =======================================================
+ Author: Komahan Boopathy, University of Dayton, OH
+ Email : komahan.cool@gmail.com
+ =======================================================
+ 
+ 
+ =================================================
+          Summary of function requirements        
+ =================================================
+ 
+ >> Number of Function evals needed :          10
+ 
+ >> Initial Sample Points by Latin Hypercube
+ >> Including center of the domain
+ >> Training points are written to file :samp/sampdim02ord03Fmirdyn                                  
+ 
+ =================================================
+         Matrix Setup & Pseudo-Inverse            
+ =================================================
+ 
+  >> Number of columns in the matrix (nterms):          10
+  >> Number of rows    in the matrix  (numpc):          10
+     >> Solver : LU Decomposition
+     >> Finding Pseudo-Inverse of the matrix . . . 
+ 
+ =================================================
+                 RHS Setup                        
+ =================================================
+ 
+ >> Cost Function Number :          22
+     >> Setting up the RHS with Function evals . . .
+     >> Number of RHS entries :          10
+ 
+           1  4.058393724097461E-003
+           2  4.611225715941396E-003
+           3  3.564348010312604E-003
+           4  4.122165099401770E-003
+           5  4.484329088742129E-003
+           6  4.146384077155270E-003
+           7  3.926885673088618E-003
+           8  3.881554133914379E-003
+           9  3.858847195772308E-003
+          10  4.100979202592647E-003
+ 
+ =================================================
+             Solve Linear System                  
+ =================================================
+ 
+ >> Solving for the coefficients . . . 
+           1   13.0896941879452     
+           2   118.958046293501     
+           3  -24.6256794391646     
+           4   12.6156657844252     
+           5  -9.97460083402115     
+           6  0.444122085104633     
+           7   35.6372981401160     
+           8  -23.4828508039652     
+           9   9.35461262651195     
+          10 -0.314857389295204     
+ >> Coeffs are succesfully determined . . .
+ >> Number of coefficients :           10
+ 
+ 
+ =================================================
+             MONTE-CARLO on Surrogate             
+ =================================================
+ 
+ 
+      >> # of Monte-Carlo Samples =    50000
+      >> Writing        50000  Monte-Carlo samples to MCSampCFD00.dat
+           >> [         1     50000 ] for Processor  0
+ 
+      >> Fct,  Function index:  22   0
+ 
+      >> xavg     0.20797E-01    0.60001E+00
+      >> xstd     0.17453E-02    0.10000E-01
+ 
+      >> Mean, Var, SD  =     0.40679E-02    0.22181E-07    0.14893E-03
+ 
+      >> Meanprime =     0.60628E-01    0.10340E-01
+      >> Varprime =     0.11499E-05    0.40144E-06
+ 
+      >> Meandbleprime = 
+            0.14983E+01    0.27438E+00
+            0.27438E+00    0.14383E+00
+      >> Vardbleprime = 
+            0.15964E-04    0.55629E-04
+            0.26354E-04    0.79223E-05
+ 
+      >> Range of X(min) =    0.014   0.557
+      >> Range of X(max) =    0.029   0.644
+      >> Ymax/min =     0.49575E-02    0.35698E-02
+      >> Output Histogram  [    0.35698E-02 :    0.49575E-02 ]
+ 
+ 
+ >> Program call is successful
+ 
+ 
+ =======================================================
+ Non-Intrusive Polynomial Chaos (Stochastic Collocation)
+ =======================================================
+ Author: Komahan Boopathy, University of Dayton, OH
+ Email : komahan.cool@gmail.com
+ =======================================================
+ 
+ 
+ =================================================
+          Summary of function requirements        
+ =================================================
+ 
+ >> Number of Function evals needed :          10
+ 
+ >> Initial Sample Points by Latin Hypercube
+ >> Including center of the domain
+ >> Training points are written to file :samp/sampdim02ord03Fmirdyn                                  
+ 
+ =================================================
+         Matrix Setup & Pseudo-Inverse            
+ =================================================
+ 
+  >> Number of columns in the matrix (nterms):          10
+  >> Number of rows    in the matrix  (numpc):          10
+     >> Solver : LU Decomposition
+     >> Finding Pseudo-Inverse of the matrix . . . 
+ 
+ =================================================
+                 RHS Setup                        
+ =================================================
+ 
+ >> Cost Function Number :          22
+     >> Setting up the RHS with Function evals . . .
+     >> Number of RHS entries :          10
+ 
+           1  0.599502380448708     
+           2  0.555193954417366     
+           3  0.600593784538623     
+           4  0.572521854099004     
+           5  0.617058612469963     
+           6  0.610480408082232     
+           7  0.652718656486692     
+           8  0.558636834042409     
+           9  0.603778415282503     
+          10  0.621573837770475     
+ 
+ =================================================
+             Solve Linear System                  
+ =================================================
+ 
+ >> Solving for the coefficients . . . 
+           1  -106.937871207622     
+           2   608.437863568165     
+           3   183.936247722138     
+           4  -73.8846061437439     
+           5  -66.7825793219308     
+           6  -30.0702336427814     
+           7   172.788233345246     
+           8   112.396603449301     
+           9   64.2162669076671     
+          10   18.1146449688606     
+ >> Coeffs are succesfully determined . . .
+ >> Number of coefficients :           10
+ 
+ 
+ =================================================
+             MONTE-CARLO on Surrogate             
+ =================================================
+ 
+ 
+      >> # of Monte-Carlo Samples =    50000
+      >> Writing        50000  Monte-Carlo samples to MCSampCFD04.dat
+           >> [         1     50000 ] for Processor  0
+ 
+      >> Fct,  Function index:  22   4
+ 
+      >> xavg     0.20076E-01    0.60006E+00
+      >> xstd     0.17453E-02    0.10000E-01
+ 
+      >> Mean, Var, SD  =     0.59990E+00    0.32545E-03    0.18040E-01
+ 
+      >> Meanprime =     0.88641E+01    0.93306E+00
+      >> Varprime =     0.31797E-02    0.22246E-02
+ 
+      >> Meandbleprime = 
+            0.79323E+01    0.14797E+02
+            0.14797E+02    0.76567E+01
+      >> Vardbleprime = 
+            0.14180E+00    0.80233E-01
+            0.49041E-01    0.40196E-01
+ 
+      >> Range of X(min) =    0.013   0.553
+      >> Range of X(max) =    0.027   0.642
+      >> Ymax/min =     0.68231E+00    0.52414E+00
+      >> Output Histogram  [    0.52414E+00 :    0.68231E+00 ]
+ 
+ 
+ >> Program call is successful
+ 
+ 
+ =======================================================
+ Non-Intrusive Polynomial Chaos (Stochastic Collocation)
+ =======================================================
+ Author: Komahan Boopathy, University of Dayton, OH
+ Email : komahan.cool@gmail.com
+ =======================================================
+ 
+ 
+ =================================================
+          Summary of function requirements        
+ =================================================
+ 
+ >> Number of Function evals needed :          10
+ 
+ >> Initial Sample Points by Latin Hypercube
+ >> Including center of the domain
+ >> Training points are written to file :samp/sampdim02ord03Fmirdyn                                  
+ 
+ =================================================
+         Matrix Setup & Pseudo-Inverse            
+ =================================================
+ 
+  >> Number of columns in the matrix (nterms):          10
+  >> Number of rows    in the matrix  (numpc):          10
+     >> Solver : LU Decomposition
+     >> Finding Pseudo-Inverse of the matrix . . . 
+ 
+ =================================================
+                 RHS Setup                        
+ =================================================
+ 
+ >> Cost Function Number :          22
+     >> Setting up the RHS with Function evals . . .
+     >> Number of RHS entries :          10
+ 
+           1  4.085323656684132E-003
+           2  4.409875850115177E-003
+           3  4.401503970546880E-003
+           4  3.670286131296584E-003
+           5  3.937830392580477E-003
+           6  4.052834424979890E-003
+           7  3.902771346282576E-003
+           8  4.032354754303034E-003
+           9  4.516416375326033E-003
+          10  4.262326279879961E-003
+ 
+ =================================================
+             Solve Linear System                  
+ =================================================
+ 
+ >> Solving for the coefficients . . . 
+           1  -4.08504352640787     
+           2   133.220555967994     
+           3   3.77629041438343     
+           4  -3.40794313382996     
+           5  -2.85402262921807     
+           6 -0.609326378327226     
+           7   43.2683658548292     
+           8   2.36211103556695     
+           9   2.52438593166390     
+          10  0.352648060414262     
+ >> Coeffs are succesfully determined . . .
+ >> Number of coefficients :           10
+ 
+ 
+ =================================================
+             MONTE-CARLO on Surrogate             
+ =================================================
+ 
+ 
+      >> # of Monte-Carlo Samples =    50000
+      >> Writing        50000  Monte-Carlo samples to MCSampCFD00.dat
+           >> [         1     50000 ] for Processor  0
+ 
+      >> Fct,  Function index:  22   0
+ 
+      >> xavg     0.20076E-01    0.60006E+00
+      >> xstd     0.17453E-02    0.10000E-01
+ 
+      >> Mean, Var, SD  =     0.40948E-02    0.22308E-07    0.14936E-03
+ 
+      >> Meanprime =     0.60488E-01    0.10495E-01
+      >> Varprime =     0.10324E-05    0.42345E-06
+ 
+      >> Meandbleprime = 
+            0.12307E+01    0.27037E+00
+            0.27037E+00    0.15236E+00
+      >> Vardbleprime = 
+            0.13036E-03    0.37082E-04
+            0.17491E-04    0.11450E-04
+ 
+      >> Range of X(min) =    0.013   0.558
+      >> Range of X(max) =    0.027   0.642
+      >> Ymax/min =     0.48412E-02    0.35521E-02
+      >> Output Histogram  [    0.35521E-02 :    0.48412E-02 ]
+ 
+ 
+ >> Program call is successful
+ 
+ 
+ =======================================================
+ Non-Intrusive Polynomial Chaos (Stochastic Collocation)
+ =======================================================
+ Author: Komahan Boopathy, University of Dayton, OH
+ Email : komahan.cool@gmail.com
+ =======================================================
+ 
+ 
+ =================================================
+          Summary of function requirements        
+ =================================================
+ 
+ >> Number of Function evals needed :          10
+ 
+ >> Initial Sample Points by Latin Hypercube
+ >> Including center of the domain
+ >> Training points are written to file :samp/sampdim02ord03Fmirdyn                                  
+ 
+ =================================================
+         Matrix Setup & Pseudo-Inverse            
+ =================================================
+ 
+  >> Number of columns in the matrix (nterms):          10
+  >> Number of rows    in the matrix  (numpc):          10
+     >> Solver : LU Decomposition
+     >> Finding Pseudo-Inverse of the matrix . . . 
+ 
+ =================================================
+                 RHS Setup                        
+ =================================================
+ 
+ >> Cost Function Number :          22
+     >> Setting up the RHS with Function evals . . .
+     >> Number of RHS entries :          10
+ 
+           1  0.599656489965279     
+           2  0.591214602300949     
+           3  0.580161640824320     
+           4  0.611601121996393     
+           5  0.632734884068191     
+           6  0.585492232607816     
+           7  0.571027686007361     
+           8  0.640518340556734     
+           9  0.658156575149450     
+          10  0.544246551987082     
+ 
+ =================================================
+             Solve Linear System                  
+ =================================================
+ 
+ >> Solving for the coefficients . . . 
+           1  -92.4215769832964     
+           2   246.438713529329     
+           3   175.255154430479     
+           4  -45.9847730596459     
+           5  -90.8584613417680     
+           6  -41.9533834489818     
+           7   42.7421623838925     
+           8   77.2018083803767     
+           9   85.7873996547392     
+          10   24.5094206161381     
+ >> Coeffs are succesfully determined . . .
+ >> Number of coefficients :           10
+ 
+ 
+ =================================================
+             MONTE-CARLO on Surrogate             
+ =================================================
+ 
+ 
+      >> # of Monte-Carlo Samples =    50000
+      >> Writing        50000  Monte-Carlo samples to MCSampCFD04.dat
+           >> [         1     50000 ] for Processor  0
+ 
+      >> Fct,  Function index:  22   4
+ 
+      >> xavg     0.20092E-01    0.60006E+00
+      >> xstd     0.17453E-02    0.10000E-01
+ 
+      >> Mean, Var, SD  =     0.60005E+00    0.32628E-03    0.18063E-01
+ 
+      >> Meanprime =     0.88683E+01    0.93323E+00
+      >> Varprime =     0.31535E-02    0.22787E-02
+ 
+      >> Meandbleprime = 
+            0.58340E+01    0.15198E+02
+            0.15198E+02    0.77828E+01
+      >> Vardbleprime = 
+            0.89225E-01    0.86911E-01
+            0.53948E-01    0.50318E-01
+ 
+      >> Range of X(min) =    0.013   0.559
+      >> Range of X(max) =    0.028   0.643
+      >> Ymax/min =     0.67574E+00    0.52529E+00
+      >> Output Histogram  [    0.52529E+00 :    0.67574E+00 ]
+ 
+ 
+ >> Program call is successful
+ 
+ 
+ =======================================================
+ Non-Intrusive Polynomial Chaos (Stochastic Collocation)
+ =======================================================
+ Author: Komahan Boopathy, University of Dayton, OH
+ Email : komahan.cool@gmail.com
+ =======================================================
+ 
+ 
+ =================================================
+          Summary of function requirements        
+ =================================================
+ 
+ >> Number of Function evals needed :          10
+ 
+ >> Initial Sample Points by Latin Hypercube
+ >> Including center of the domain
+ >> Training points are written to file :samp/sampdim02ord03Fmirdyn                                  
+ 
+ =================================================
+         Matrix Setup & Pseudo-Inverse            
+ =================================================
+ 
+  >> Number of columns in the matrix (nterms):          10
+  >> Number of rows    in the matrix  (numpc):          10
+     >> Solver : LU Decomposition
+     >> Finding Pseudo-Inverse of the matrix . . . 
+ 
+ =================================================
+                 RHS Setup                        
+ =================================================
+ 
+ >> Cost Function Number :          22
+     >> Setting up the RHS with Function evals . . .
+     >> Number of RHS entries :          10
+ 
+           1  4.086389438408783E-003
+           2  4.452588351161430E-003
+           3  3.920272388172206E-003
+           4  4.269674760631766E-003
+           5  3.830296705488818E-003
+           6  4.030921417226420E-003
+           7  4.376403894428092E-003
+           8  3.864491991234256E-003
+           9  4.137910956261928E-003
+          10  4.012861661321481E-003
+ 
+ =================================================
+             Solve Linear System                  
+ =================================================
+ 
+ >> Solving for the coefficients . . . 
+           1   10.8862214561552     
+           2  -174.164955211735     
+           3  -10.7214144036519     
+           4   11.8352439679520     
+           5 -0.191887860179123     
+           6 -0.862970963890916     
+           7  -58.2554482449786     
+           8  -12.7378687689807     
+           9  0.817338122636040     
+          10  0.511076715686564     
+ >> Coeffs are succesfully determined . . .
+ >> Number of coefficients :           10
+ 
+ 
+ =================================================
+             MONTE-CARLO on Surrogate             
+ =================================================
+ 
+ 
+      >> # of Monte-Carlo Samples =    50000
+      >> Writing        50000  Monte-Carlo samples to MCSampCFD00.dat
+           >> [         1     50000 ] for Processor  0
+ 
+      >> Fct,  Function index:  22   0
+ 
+      >> xavg     0.20092E-01    0.60006E+00
+      >> xstd     0.17453E-02    0.10000E-01
+ 
+      >> Mean, Var, SD  =     0.40958E-02    0.22220E-07    0.14906E-03
+ 
+      >> Meanprime =     0.60648E-01    0.10454E-01
+      >> Varprime =     0.10734E-05    0.41316E-06
+ 
+      >> Meandbleprime = 
+            0.13607E+01    0.27715E+00
+            0.27715E+00    0.14695E+00
+      >> Vardbleprime = 
+           -0.15382E-03    0.22150E-04
+           -0.10958E-05    0.11881E-04
+ 
+      >> Range of X(min) =    0.012   0.555
+      >> Range of X(max) =    0.028   0.650
+      >> Ymax/min =     0.51839E-02    0.35672E-02
+      >> Output Histogram  [    0.35672E-02 :    0.51839E-02 ]
+ 
+ 
+ >> Program call is successful
+ 
+ 
+ =======================================================
+ Non-Intrusive Polynomial Chaos (Stochastic Collocation)
+ =======================================================
+ Author: Komahan Boopathy, University of Dayton, OH
+ Email : komahan.cool@gmail.com
+ =======================================================
+ 
+ 
+ =================================================
+          Summary of function requirements        
+ =================================================
+ 
+ >> Number of Function evals needed :          10
+ 
+ >> Initial Sample Points by Latin Hypercube
+ >> Including center of the domain
+ >> Training points are written to file :samp/sampdim02ord03Fmirdyn                                  
+ 
+ =================================================
+         Matrix Setup & Pseudo-Inverse            
+ =================================================
+ 
+  >> Number of columns in the matrix (nterms):          10
+  >> Number of rows    in the matrix  (numpc):          10
+     >> Solver : LU Decomposition
+     >> Finding Pseudo-Inverse of the matrix . . . 
+ 
+ =================================================
+                 RHS Setup                        
+ =================================================
+ 
+ >> Cost Function Number :          22
+     >> Setting up the RHS with Function evals . . .
+     >> Number of RHS entries :          10
+ 
+           1  0.599642841267460     
+           2  0.657873531603068     
+           3  0.544118394086299     
+           4  0.612397139424913     
+           5  0.634702819703556     
+           6  0.644843443164517     
+           7  0.594294953347981     
+           8  0.584732280453399     
+           9  0.559568785342478     
+          10  0.578197048992180     
+ 
+ =================================================
+             Solve Linear System                  
+ =================================================
+ 
+ >> Solving for the coefficients . . . 
+           1   444.054462278787     
+           2   3620.72839059278     
+           3  -830.197991245104     
+           4   513.940627893301     
+           5  -125.088114975149     
+           6  -62.8619950091540     
+           7   1146.57574901007     
+           8  -973.998279744589     
+           9   149.500651069249     
+          10   35.4879585225400     
+ >> Coeffs are succesfully determined . . .
+ >> Number of coefficients :           10
+ 
+ 
+ =================================================
+             MONTE-CARLO on Surrogate             
+ =================================================
+ 
+ 
+      >> # of Monte-Carlo Samples =    50000
+      >> Writing        50000  Monte-Carlo samples to MCSampCFD04.dat
+           >> [         1     50000 ] for Processor  0
+ 
+      >> Fct,  Function index:  22   4
+ 
+      >> xavg     0.20054E-01    0.60007E+00
+      >> xstd     0.17453E-02    0.10000E-01
+ 
+      >> Mean, Var, SD  =     0.60004E+00    0.32754E-03    0.18098E-01
+ 
+      >> Meanprime =     0.88516E+01    0.93474E+00
+      >> Varprime =     0.27092E-02    0.23590E-02
+ 
+      >> Meandbleprime = 
+           -0.30879E+01    0.15268E+02
+            0.15268E+02    0.80432E+01
+      >> Vardbleprime = 
+            0.55635E-01    0.12773E-02
+           -0.34093E-01    0.71158E-01
+ 
+      >> Range of X(min) =    0.013   0.559
+      >> Range of X(max) =    0.027   0.651
+      >> Ymax/min =     0.69208E+00    0.52435E+00
+      >> Output Histogram  [    0.52435E+00 :    0.69208E+00 ]
+ 
+ 
+ >> Program call is successful
+ 
+ 
+ =======================================================
+ Non-Intrusive Polynomial Chaos (Stochastic Collocation)
+ =======================================================
+ Author: Komahan Boopathy, University of Dayton, OH
+ Email : komahan.cool@gmail.com
+ =======================================================
+ 
+ 
+ =================================================
+          Summary of function requirements        
+ =================================================
+ 
+ >> Number of Function evals needed :          10
+ 
+ >> Initial Sample Points by Latin Hypercube
+ >> Including center of the domain
+ >> Training points are written to file :samp/sampdim02ord03Fmirdyn                                  
+ 
+ =================================================
+         Matrix Setup & Pseudo-Inverse            
+ =================================================
+ 
+  >> Number of columns in the matrix (nterms):          10
+  >> Number of rows    in the matrix  (numpc):          10
+     >> Solver : LU Decomposition
+     >> Finding Pseudo-Inverse of the matrix . . . 
+ 
+ =================================================
+                 RHS Setup                        
+ =================================================
+ 
+ >> Cost Function Number :          22
+     >> Setting up the RHS with Function evals . . .
+     >> Number of RHS entries :          10
+ 
+           1  4.084690610826548E-003
+           2  3.710802637910058E-003
+           3  3.977720497947748E-003
+           4  4.000096515668321E-003
+           5  4.000124681255456E-003
+           6  4.528156410643559E-003
+           7  4.715452374731100E-003
+           8  4.157283305635027E-003
+           9  3.961255368467408E-003
+          10  3.954201446241455E-003
+ 
+ =================================================
+             Solve Linear System                  
+ =================================================
+ 
+ >> Solving for the coefficients . . . 
+           1  0.276262665343156     
+           2  -18.5732475811487     
+           3   1.92070663509349     
+           4   1.47430468978166     
+           5  -2.44660696923977     
+           6  -1.07658878405664     
+           7  -7.17890559830045     
+           8 -0.555132320629316     
+           9   2.30017970744379     
+          10  0.614434528511596     
+ >> Coeffs are succesfully determined . . .
+ >> Number of coefficients :           10
+ 
+ 
+ =================================================
+             MONTE-CARLO on Surrogate             
+ =================================================
+ 
+ 
+      >> # of Monte-Carlo Samples =    50000
+      >> Writing        50000  Monte-Carlo samples to MCSampCFD00.dat
+           >> [         1     50000 ] for Processor  0
+ 
+      >> Fct,  Function index:  22   0
+ 
+      >> xavg     0.20054E-01    0.60007E+00
+      >> xstd     0.17453E-02    0.10000E-01
+ 
+      >> Mean, Var, SD  =     0.40944E-02    0.22247E-07    0.14915E-03
+ 
+      >> Meanprime =     0.60685E-01    0.10476E-01
+      >> Varprime =     0.11361E-05    0.42941E-06
+ 
+      >> Meandbleprime = 
+            0.14186E+01    0.29165E+00
+            0.29165E+00    0.15129E+00
+      >> Vardbleprime = 
+            0.11182E-04    0.38523E-04
+            0.14413E-04    0.14610E-04
+ 
+      >> Range of X(min) =    0.013   0.556
+      >> Range of X(max) =    0.027   0.647
+      >> Ymax/min =     0.48865E-02    0.35981E-02
+      >> Output Histogram  [    0.35981E-02 :    0.48865E-02 ]
+ 
+ 
+ >> Program call is successful
+ 

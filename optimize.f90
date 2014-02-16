@@ -31,13 +31,13 @@
 
 !     We suppress the default output.
 
-        iprint = -1
+        iprint = 1
      
 !     We suppress both code-supplied stopping tests because the
 !        user is providing his own stopping criteria.
 
-        factr=1.0d+7
-        pgtol=1.0d+7
+        factr=1.d+3
+        pgtol=gtol
 
 !     We specify the number m of limited memory corrections stored.  
         
@@ -65,7 +65,7 @@
            fgcnt=fgcnt+1
 
            call omp_set_num_threads(omp_get_max_threads())
-           call Eulersolve(D,ndvart,1,fobj,dfdD,dfdDD,1,v,fct)
+           call Eulersolve(D,ndvart,0,fobj,dfdD,dfdDD,1,v,fct)
 
            dfdDtmp(1:ndvar)=dfdD(1:ndvar)
 
