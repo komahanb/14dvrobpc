@@ -84,7 +84,25 @@
      X_L(i) = -0.01
      X_U(i) = 0.01
   end do
-
+!!$ 
+!!$ X  (           1 ) =   6.322314002311181E-004
+!!$ X  (           2 ) =   4.782317742187943E-004
+!!$ X  (           3 ) =   8.308843002094116E-003
+!!$ X  (           4 ) =   8.192763823336460E-003
+!!$ X  (           5 ) =   8.285645755952498E-003
+!!$ X  (           6 ) =   8.524613241618314E-003
+!!$ X  (           7 ) =   8.824962221534805E-003
+!!$ X  (           8 ) =   5.725469702383775E-003
+!!$ X  (           9 ) =   2.837965089090475E-003
+!!$ X  (          10 ) =   2.734376837101123E-003
+!!$ X  (          11 ) =   6.503823150165683E-003
+!!$ X  (          12 ) =   7.988961898806017E-003
+!!$ X  (          13 ) =   5.379790804043116E-004
+!!$ X  (          14 ) =   6.437098878368605E-004
+!!$ X  (          15 ) =    3.05831793324168     
+!!$ X  (          16 ) =   0.600102808129938  
+     
+ 
   X_L(1) = -0.00125
   X_U(1) = 0.00125
   sigmax(1)=0.00125
@@ -131,7 +149,7 @@
   !(2)     Integer Settings and store into IDAT (check for size above)
   !===================================================================
 
-     kprob=0
+     kprob=1
      
      probtype(:)=1
      
@@ -350,6 +368,8 @@ end program problemPC
      
       end if
 
+      call stop_all
+
 !---- OBJECTIVE FUNCTION gradient and x value
 
       do i=1,N-2
@@ -509,7 +529,7 @@ end program problemPC
 
          NMC=100000
 
-      call PCestimate(2,N,x,sigmax,22,0,DAT(1001:1020),2,2,2,0,probtype,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp,fmeandbleprimetmp,fvardbleprimetmp)
+!      call PCestimate(2,N,x,sigmax,22,0,DAT(1001:1020),2,2,2,0,probtype,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp,fmeandbleprimetmp,fvardbleprimetmp)
 
 
          !fvartmp=0.0
@@ -609,7 +629,7 @@ end program problemPC
             dc(:,:)=0.0
 
 
-            call PCestimate(2,N,x,sigmax,22,4,DAT(1001:1020),2,2,2,0,probtype,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp,fmeandbleprimetmp,fvardbleprimetmp)
+!            call PCestimate(2,N,x,sigmax,22,4,DAT(1001:1020),2,2,2,0,probtype,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp,fmeandbleprimetmp,fvardbleprimetmp)
 
             !fvartmp=0.0
             !fvarprimetmp(:)=0.0
@@ -721,6 +741,7 @@ end program problemPC
          write(86,'(i5,2e15.7)') ITER_COUNT,OBJVAL,DAT(1020+1)
          
       end if
+      if (ITER_COUNT .eq.0) call stop_all
 
       if (ITER_COUNT .gt. 1 ) then
 

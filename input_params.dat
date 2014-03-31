@@ -70,7 +70,7 @@ Gradient and Hessian Flags
 .true.		Machdv
 .false.		output2screen
 .true.		outputhd
-.true.		timing
+.false.		timing
 .false.		derivfd1
 .false.		derivfd2
 .true.		derivadj

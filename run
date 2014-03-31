@@ -1,2 +1,11 @@
 make
 mpiexec -np 1 ./MixedOUU  |tee screen
+mv HISTG* ValidationInitial/
+mv screen ValidationInitial/
+mv fort.* ValidationInitial/
+
+make
+mpiexec -np 1 ./MixedOUU  |tee screen
+mv HISTG* ValidationFinal/
+mv screen ValidationFinal/
+mv fort.* ValidationFinal/

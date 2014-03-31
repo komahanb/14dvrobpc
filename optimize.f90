@@ -31,7 +31,7 @@
 
 !     We suppress the default output.
 
-        iprint = 1
+        iprint = -1
      
 !     We suppress both code-supplied stopping tests because the
 !        user is providing his own stopping criteria.
